@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="./style/flori.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyJjeynZiCrmE-tRu6TlCdhTNyMe9ghIo&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="./style/landingPage.css">
 
-
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 </head>
@@ -75,12 +73,13 @@
                         <div class="swiper-slide">Slide 3</div> -->
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <div style="color:#ff6c00" class="swiper-pagination"></div>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div style="color:#ff6c00" class="swiper-button-prev"></div>
+                    <div style="color:#ff6c00" class="swiper-button-next"></div>
 
-                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-scrollbar" style="color:#ff6c00"></div>
+
                 </div>
 
                 <h1 class="titlu"></h1>
@@ -119,7 +118,25 @@
 
             </div>
         </div>
-
+        <section class="mapa" id='contact'>
+            <div class="content" style="flex-wrap: nowrap; width:100vw; justify-content: space-around;">
+                <div class="txt">
+                    <form action="">
+                        <h2>Ai o comandă specială? Lasă aici detaliile ei și te voi contacta cât mai repede </h2>
+                        <div class="row">
+                            <input type="text" placeholder="Nume" required>
+                            <input type="text" placeholder="Prenume" required>
+                        </div>
+                        <div class="row">
+                            <input type="email" placeholder="Email" required>
+                            <input type="tel" autocomplete="tel" placeholder="Număr de telefon" required>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Scrie un mesaj"></textarea>
+                        <button>Trimite mesaj</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
@@ -302,83 +319,7 @@
             deleteAll();
         }
     </script>
-    <?php
 
-    require_once '../core/init.php';
-
-
-    // if (Input::exists()) {
-
-    //     if (Token::check(Input::get('token'))) {
-    //         $validate = new Validation();
-
-    //         $validation = $validate->check($_POST, array(
-    //             "nume" => array(
-    //                 'required' => true,
-    //             ),
-    //             "descriere" => array(
-    //                 'required' => true,
-    //             ),
-    //             "pret" => array(
-    //                 "required" => true,
-    //             ),
-    //             "cantitate" => array(
-    //                 'required' => true,
-    //             ),
-    //         ));
-
-    //         if ($validation->passed()) {
-    //             $user = new User();
-
-    //             $files = array_filter($_FILES['imagini']['name']);
-    //             $cate_is = count($_FILES['imagini']['name']);
-
-    //             $array_cu_imag = array();
-
-    //             for ($i = 0; $i < $cate_is; $i++) {
-    //                 $temporale = $_FILES['imagini']['tmp_name'][$i];
-
-    //                 if ($temporale != "") {
-    //                     $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
-    //                     $newFilePath = "./img/" . $_FILES['imagini']['name'][$i];
-    //                     move_uploaded_file($temporale, $newFilePath);
-    //                 }
-    //             }
-
-    //             $imgs = array();
-    //             for ($i = 0; $i < count($array_cu_imag); $i++) {
-    //                 $imgs[$i] = $array_cu_imag[$i];
-    //             }
-
-    //             try {
-    //                 $user->addFlowers(array(
-    //                     'produs_id' => uniqid(),
-    //                     'nume' => Input::get("nume"),
-    //                     'descriere' => Input::get("descriere"),
-    //                     'pret' => Input::get("pret"),
-    //                     'cantitate' => Input::get("cantitate"),
-    //                     'imagini' => json_encode($imgs)
-    //                 ));
-    //             } catch (Exception $e) {
-    //                 die($e->getMessage());
-    //             }
-    //         } else {
-    //             foreach ($validation->errors() as $error) {
-    //                 echo "<h2>" . $error . "</h2><br/>";
-    //             }
-    //         }
-    //     }
-    // }
-    ?>
-    <!-- <form method="POST" enctype="multipart/form-data">
-        <input type="text" name="nume">
-        <textarea type="text" name="descriere"></textarea>
-        <input type="number" name="pret">
-        <input type="number" name="cantitate">
-        <input type="file" multiple name="imagini[]">
-        <input type="hidden" value="<?php echo Token::generate(); ?>" name="token">
-        <button type="submit">Submit</button>
-    </form> -->
     <?php
     require_once './components/footer.php';
     require_once './components/imports.php';

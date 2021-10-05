@@ -4,176 +4,18 @@
 
 require_once '../core/init.php';
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/flori.css">
     <title>Pagina de admin</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-        @import url(https://fonts.googleapis.com/css?family=Teko:700);
 
-        .snip1543 {
-            background-color: #fff;
-            color: #ffffff;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 16px;
-            margin: 10px;
-            max-width: 315px;
-            min-width: 230px;
-            overflow: hidden;
-            position: relative;
-            text-align: left;
-            width: 100%;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-        }
-
-        .snip1543 *,
-        .snip1543 *:before,
-        .snip1543 *:after {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition: all 0.45s ease;
-            transition: all 0.45s ease;
-        }
-
-        .snip1543 img {
-            backface-visibility: hidden;
-            max-width: 100%;
-            vertical-align: top;
-        }
-
-        .snip1543:before,
-        .snip1543:after {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            content: '';
-            background-color: #b81212;
-            opacity: 0.5;
-            -webkit-transition: all 0.45s ease;
-            transition: all 0.45s ease;
-        }
-
-        .snip1543:before {
-            -webkit-transform: skew(30deg) translateX(-80%);
-            transform: skew(30deg) translateX(-80%);
-        }
-
-        .snip1543:after {
-            -webkit-transform: skew(-30deg) translateX(-70%);
-            transform: skew(-30deg) translateX(-70%);
-        }
-
-        .snip1543 figcaption {
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            z-index: 1;
-            bottom: 0;
-            padding: 25px 40% 25px 20px;
-        }
-
-        .snip1543 figcaption:before,
-        .snip1543 figcaption:after {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #b81212;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-            content: '';
-            opacity: 0.5;
-            z-index: -1;
-        }
-
-        .snip1543 figcaption:before {
-            -webkit-transform: skew(30deg) translateX(-100%);
-            transform: skew(30deg) translateX(-100%);
-        }
-
-        .snip1543 figcaption:after {
-            -webkit-transform: skew(-30deg) translateX(-90%);
-            transform: skew(-30deg) translateX(-90%);
-        }
-
-        .snip1543 h3,
-        .snip1543 p {
-            margin: 0;
-            opacity: 0;
-            letter-spacing: 1px;
-        }
-
-        .snip1543 h3 {
-            font-family: 'Teko', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1em;
-            text-transform: uppercase;
-        }
-
-        .snip1543 p {
-            font-size: 0.9em;
-        }
-
-        .snip1543 a {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1;
-        }
-
-        .snip1543:hover h3,
-        .snip1543.hover h3,
-        .snip1543:hover p,
-        .snip1543.hover p {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            opacity: 0.9;
-            -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-        }
-
-        .snip1543:hover:before,
-        .snip1543.hover:before {
-            -webkit-transform: skew(30deg) translateX(-20%);
-            transform: skew(30deg) translateX(-20%);
-            -webkit-transition-delay: 0.05s;
-            transition-delay: 0.05s;
-        }
-
-        .snip1543:hover:after,
-        .snip1543.hover:after {
-            -webkit-transform: skew(-30deg) translateX(-10%);
-            transform: skew(-30deg) translateX(-10%);
-        }
-
-        .snip1543:hover figcaption:before,
-        .snip1543.hover figcaption:before {
-            -webkit-transform: skew(30deg) translateX(-40%);
-            transform: skew(30deg) translateX(-40%);
-            -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s;
-        }
-
-        .snip1543:hover figcaption:after,
-        .snip1543.hover figcaption:after {
-            -webkit-transform: skew(-30deg) translateX(-30%);
-            transform: skew(-30deg) translateX(-30%);
-            -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
-        }
-    </style>
 </head>
 
 
@@ -185,7 +27,7 @@ require_once '../core/init.php';
 
     <div style="width: 100vw;height:100px;"></div>
 
-    <figure class="snip1543">
+    <!-- <figure class="snip1543">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample108.jpg" alt="sample108" />
         <figcaption>
             <h3>Inverness McKenzie</h3>
@@ -206,8 +48,8 @@ require_once '../core/init.php';
             <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
         </figcaption>
         <a href="#"></a>
-    </figure>
-  <?php
+    </figure> -->
+    <?php
 
 
     if (Input::exists()) {
@@ -284,18 +126,11 @@ require_once '../core/init.php';
         <button type="submit">Submit</button>
     </form>
 
-    
+
     <main>
-        <!-- <div class="headerFlori">
-            <div class="layer"></div>
-            <div class="incadrare">
-                <h1>cele mai blana flori furate <br /> la tigani</h1>
-            </div>
-        </div> -->
         <div class="flori">
 
             <?php
-            // require_once '../core/init.php';
             $db = Db::getInstance();
             $flori = $db->get("flori", array("id", ">=", "1"));
 
@@ -314,6 +149,11 @@ require_once '../core/init.php';
                             <h2>" . $floare->nume . "</h2>
                             <h2 class='more' >Citeste mai mult</h2>
                             <input type='hidden' value=" . $floare->id . " />
+
+                            <form action='delete.php' method='POST'>
+                            <input type='hidden' name='id' value=" . $floare->id . " />
+                            <button type='submit' name='submit'>Delete</button>
+                            </form>
                         </div>";
             }
             ?>
@@ -333,12 +173,12 @@ require_once '../core/init.php';
                         <div class="swiper-slide">Slide 3</div> -->
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <div style="color:#ff6c00" class="swiper-pagination"></div>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div style="color:#ff6c00" class="swiper-button-prev"></div>
+                    <div style="color:#ff6c00" class="swiper-button-next"></div>
 
-                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-scrollbar" style="color:#ff6c00"></div>
                 </div>
 
                 <h1 class="titlu"></h1>
@@ -377,23 +217,36 @@ require_once '../core/init.php';
 
             </div>
         </div>
-
     </main>
-
-
-
-
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-        const mores = document.querySelectorAll(".floare h2");
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        const mores = document.querySelectorAll(".more");
         const openMore = document.querySelector(".openMore");
         const x = document.querySelector(".x");
         const txt = document.querySelector(".text");
         const titlu = document.querySelector(".titlu");
-        const imgs = document.querySelector(".imgs");
+        const imgs = document.querySelector(".swiper-wrapper");
         const pret = document.querySelector(".pret");
         let value = document.querySelector(".value");
+        const button = document.querySelector(".t form button");
 
 
         const ArrayValue = [
@@ -403,7 +256,6 @@ require_once '../core/init.php';
             }
             ?>
         ]
-
 
         const ArrayCantitate = [
             <?php
@@ -433,7 +285,7 @@ require_once '../core/init.php';
         let arrayDescrieri = [
             <?php
             foreach ($flori as $floare) {
-                echo "'" . $floare->descriere . "', ";
+                echo "'" . trim($floare->descriere) . "', ";
             }
             ?>
         ];
@@ -467,6 +319,19 @@ require_once '../core/init.php';
             ?>
         ]
 
+
+        // document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
+        //     if (!button.classList.contains('loading')) {
+        //         close();
+        //         button.classList.add('loading');
+
+        //         setTimeout(() => button.classList.remove('loading'), 3700);
+        //     }
+
+        //     e.preventDefault();
+        // }));
+
+
         let a = true;
 
         for (let i = 0; i < mores.length; i -= -1) {
@@ -485,22 +350,37 @@ require_once '../core/init.php';
         x.addEventListener("click", close);
 
         function mare(tit_string, txt_string, imgsArr, cantitate, pret_int, value_id) {
-            openMore.style.display = "flex";
-            titlu.innerHTML = tit_string;
-            txt.innerHTML = txt_string;
-            pret.innerHTML = pret_int;
-            value.value = value_id;
 
-            for (let i = 0; i < imgsArr.length; i++) {
-                let img = document.createElement("img");
-                img.setAttribute("src", imgsArr[i]);
-                imgs.appendChild(img);
-            }
 
             if (cantitate > 0) {
-                console.log(cantitate - 1, " mai raman daca mai cumpara");
+                openMore.style.display = "flex";
+                titlu.innerHTML = tit_string;
+                txt.innerHTML = txt_string;
+                pret.innerHTML = pret_int + " RON";
+                value.value = value_id;
+
+                for (let i = 0; i < imgsArr.length; i++) {
+                    let img = document.createElement("img");
+                    img.setAttribute("src", imgsArr[i]);
+                    imgs.appendChild(img);
+                    img.classList = "swiper-slide";
+                }
+                button.disabled = false;
+
             } else {
-                console.log("nu mai are mama ca ti-ar da");
+                openMore.style.display = "flex";
+                titlu.innerHTML = tit_string;
+                txt.innerHTML = txt_string;
+                pret.innerHTML = pret_int + " RON";
+                value.value = value_id;
+
+                for (let i = 0; i < imgsArr.length; i++) {
+                    let img = document.createElement("img");
+                    img.setAttribute("src", imgsArr[i]);
+
+                    imgs.appendChild(img);
+                }
+                button.disabled = true;
             }
         }
 
@@ -516,11 +396,175 @@ require_once '../core/init.php';
 </body>
 
 </html>
-<script>
+<!-- <script>
     /* Demo purposes only */
     $(".hover").mouseleave(
         function() {
             $(this).removeClass("hover");
         }
     );
-</script>
+</script> -->
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+    @import url(https://fonts.googleapis.com/css?family=Teko:700);
+
+    .snip1543 {
+        background-color: #fff;
+        color: #ffffff;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        margin: 10px;
+        max-width: 315px;
+        min-width: 230px;
+        overflow: hidden;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    .snip1543 *,
+    .snip1543 *:before,
+    .snip1543 *:after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.45s ease;
+        transition: all 0.45s ease;
+    }
+
+    .snip1543 img {
+        backface-visibility: hidden;
+        max-width: 100%;
+        vertical-align: top;
+    }
+
+    .snip1543:before,
+    .snip1543:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        background-color: #b81212;
+        opacity: 0.5;
+        -webkit-transition: all 0.45s ease;
+        transition: all 0.45s ease;
+    }
+
+    .snip1543:before {
+        -webkit-transform: skew(30deg) translateX(-80%);
+        transform: skew(30deg) translateX(-80%);
+    }
+
+    .snip1543:after {
+        -webkit-transform: skew(-30deg) translateX(-70%);
+        transform: skew(-30deg) translateX(-70%);
+    }
+
+    .snip1543 figcaption {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+        bottom: 0;
+        padding: 25px 40% 25px 20px;
+    }
+
+    .snip1543 figcaption:before,
+    .snip1543 figcaption:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #b81212;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        content: '';
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .snip1543 figcaption:before {
+        -webkit-transform: skew(30deg) translateX(-100%);
+        transform: skew(30deg) translateX(-100%);
+    }
+
+    .snip1543 figcaption:after {
+        -webkit-transform: skew(-30deg) translateX(-90%);
+        transform: skew(-30deg) translateX(-90%);
+    }
+
+    .snip1543 h3,
+    .snip1543 p {
+        margin: 0;
+        opacity: 0;
+        letter-spacing: 1px;
+    }
+
+    .snip1543 h3 {
+        font-family: 'Teko', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+
+    .snip1543 p {
+        font-size: 0.9em;
+    }
+
+    .snip1543 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .snip1543:hover h3,
+    .snip1543.hover h3,
+    .snip1543:hover p,
+    .snip1543.hover p {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0.9;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+    }
+
+    .snip1543:hover:before,
+    .snip1543.hover:before {
+        -webkit-transform: skew(30deg) translateX(-20%);
+        transform: skew(30deg) translateX(-20%);
+        -webkit-transition-delay: 0.05s;
+        transition-delay: 0.05s;
+    }
+
+    .snip1543:hover:after,
+    .snip1543.hover:after {
+        -webkit-transform: skew(-30deg) translateX(-10%);
+        transform: skew(-30deg) translateX(-10%);
+    }
+
+    .snip1543:hover figcaption:before,
+    .snip1543.hover figcaption:before {
+        -webkit-transform: skew(30deg) translateX(-40%);
+        transform: skew(30deg) translateX(-40%);
+        -webkit-transition-delay: 0.15s;
+        transition-delay: 0.15s;
+    }
+
+    .snip1543:hover figcaption:after,
+    .snip1543.hover figcaption:after {
+        -webkit-transform: skew(-30deg) translateX(-30%);
+        transform: skew(-30deg) translateX(-30%);
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+    }
+</style>

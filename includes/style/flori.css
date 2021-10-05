@@ -78,23 +78,23 @@
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 1) {
-  -webkit-transition-delay: 0.98332s;
-          transition-delay: 0.98332s;
+  -webkit-transition-delay: 0.39427s;
+          transition-delay: 0.39427s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 2) {
-  -webkit-transition-delay: 0.16848s;
-          transition-delay: 0.16848s;
+  -webkit-transition-delay: 0.33476s;
+          transition-delay: 0.33476s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 3) {
-  -webkit-transition-delay: 0.3299s;
-          transition-delay: 0.3299s;
+  -webkit-transition-delay: 0.83157s;
+          transition-delay: 0.83157s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 4) {
-  -webkit-transition-delay: 0.91537s;
-          transition-delay: 0.91537s;
+  -webkit-transition-delay: 0.25854s;
+          transition-delay: 0.25854s;
 }
 
 .header .nav-links .nav-link a {
@@ -236,20 +236,20 @@
     transition: opacity 0.2s ease-in-out 1s, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s, -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 1) {
-    -webkit-transition-delay: 0.70091s;
-            transition-delay: 0.70091s;
+    -webkit-transition-delay: 0.91007s;
+            transition-delay: 0.91007s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 2) {
-    -webkit-transition-delay: 0.90072s;
-            transition-delay: 0.90072s;
+    -webkit-transition-delay: 0.06509s;
+            transition-delay: 0.06509s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 3) {
-    -webkit-transition-delay: 0.32767s;
-            transition-delay: 0.32767s;
+    -webkit-transition-delay: 0.99976s;
+            transition-delay: 0.99976s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 4) {
-    -webkit-transition-delay: 0.62491s;
-            transition-delay: 0.62491s;
+    -webkit-transition-delay: 0.31162s;
+            transition-delay: 0.31162s;
   }
   .header .menu-btn:checked ~ .menu-icon {
     border-radius: 90px;

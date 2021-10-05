@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const header = document.querySelector(".header");
 const menuBtn = document.querySelector("#menu-btn");
 
 window.addEventListener("scroll", (e) => {

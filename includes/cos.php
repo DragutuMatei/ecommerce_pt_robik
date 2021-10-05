@@ -8,7 +8,18 @@
     <title>Florarie</title>
     <link rel="stylesheet" href="./style/cos.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id"></script> -->
+
 </head>
+
+<script>
+    // paypal.Buttons({
+    //     create_order: function(data, actions) {
+
+    //     }
+    // })
+</script>
 
 <body>
 
@@ -17,14 +28,10 @@
     ?>
 
     <?php
-    // require './components/loading.php'
-    ?>
-    <?php
     require './components/navbar.php'
     ?>
 
-    <div class="headerFlori">
-        <div class="layer"></div>
+    <div class="headerFlori jmek">
         <div class="incadrare">
             <h1>coș de cumpărături</h1>
         </div>
@@ -57,9 +64,9 @@
                         <div class="prod produs-' . $index . ' ">
                             <img src="' . $imgs[0] . '" />
                             <div class="detalii">
-                                <h3>' . $item->nume . '</h3>
+                                <h3>' . $item->nume . ' - ' . intval($item->pret, 10) *  intval($_SESSION["qty"][$_SESSION['user']][$item->id], 10) . ' RON </h3>
                                 <form method="POST" action="qt.php">
-                                    <input type="number" min="1" class="input" name="qt" value=' . $_SESSION["qty"][$_SESSION['user']][$item->id] . ' />
+                                    <input type="number" min="1" class="input" onchange="showTotal()" name="qt" value=' . $_SESSION["qty"][$_SESSION['user']][$item->id] . ' />
                                     <input type="hidden" name="user" value="' . $_SESSION['user'] . '" />
                                     <input type="hidden" name="id" value="' . $item->id . '" />
                                     <button type="submit" name="submit" style="cursor:pointer;" >Change quantity </button>
@@ -105,10 +112,10 @@
                     <textarea name="note" placeholder="Note*"></textarea>
 
                     <h2>Info paypall</h2>
-                    
-                    <input type="text" name="nr_card" >
 
-                    <button>Trimite comanada</button>
+                    <input type="text" name="nr_card">
+
+                    <button>Trimite comanda</button>
 
                 </form>
             </div>

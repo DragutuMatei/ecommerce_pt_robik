@@ -44,6 +44,15 @@
     height: 100%;
   }
 }
+.jmek {
+  background: url(../img/Wave-10s-1440px.svg);
+  background-position: left;
+  background-size: cover;
+
+  .incadrare h1 {
+    color: white;
+  }
+}
 
 .items {
   width: 100vw;
@@ -67,6 +76,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+      margin: 15px;
 
       img {
         width: 100px;
@@ -136,11 +146,17 @@
       }
     }
     .oke {
+      padding: 10px;
+
       form {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        input,
+        textarea {
+          width: 100%;
+        }
       }
     }
   }
