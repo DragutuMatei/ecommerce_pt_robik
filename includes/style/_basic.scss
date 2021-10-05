@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import "navbar";
+
+$yellow: #5b5b5a;
+$orange: #ff6c00;
+
+$poppins: "Poppins", sans-serif;
+$roboto: "Roboto", sans-serif;
+$rubik: "Rubik", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+img{
+  user-select: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+#loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  top: 0%;
+  left: 0;
+  position: fixed;
+  background: white;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

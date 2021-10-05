@@ -1,0 +1,7 @@
+.firstPage {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../img/background.svg) center no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */

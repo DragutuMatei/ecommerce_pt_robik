@@ -1,0 +1,76 @@
+footer {
+  width: 100vw;
+  min-height: 400px;
+  background: $altgray;
+
+  .up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    div {
+      margin: 30px;
+    }
+
+    .leftFooter {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 600px;
+
+      .linie {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        margin: 20px;
+
+        lord-icon {
+          margin-right: 30px;
+        }
+        p {
+          font-size: 15px;
+          color: white;
+          font-family: $roboto;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .centerFooter {
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        border-radius: 90%;
+        margin: 20px;
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .down {
+    width: 100vw;
+    text-align: center;
+    padding: 30px;
+
+    a {
+      font-size: 20px;
+      color: white;
+      font-family: $roboto;
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: white;
+      font-family: $poppins;
+    }
+  }
+}

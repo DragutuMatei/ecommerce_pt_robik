@@ -1,0 +1,1 @@
+aia e frt, s-a dus pe pl
