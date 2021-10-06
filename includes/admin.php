@@ -158,7 +158,7 @@ if (!Session::exists("adminSession")) {
             </div>
         </div>
 
-    <div class="mailuri">
+        <div class="mailuri">
             <?php
 
             $mail = new Mail();
