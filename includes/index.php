@@ -8,7 +8,7 @@ require_once '../core/init.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florarie</title>
+    <title>Magazin</title>
     <link rel="stylesheet" href="./style/landingPage.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyJjeynZiCrmE-tRu6TlCdhTNyMe9ghIo&callback=initMap&libraries=&v=weekly" defer>
@@ -136,18 +136,18 @@ require_once '../core/init.php';
         <section class="mapa" id='contact'>
             <div class="content" style="flex-wrap: nowrap; width:100vw; justify-content: space-around;">
                 <div class="txt">
-                    <form action="">
+                    <form action="mail.php" method="POST">
                         <h2>Pentru sugestii, ne puteti contacta prin formularul de mai jos</h2>
                         <div class="row">
-                            <input type="text" placeholder="Nume" required>
-                            <input type="text" placeholder="Prenume" required>
+                            <input type="text" name="nume" placeholder="Nume" required>
+                            <input type="text" name="prenume" placeholder="Prenume" required>
                         </div>
                         <div class="row">
-                            <input type="email" placeholder="Email" required>
-                            <input type="tel" autocomplete="tel" placeholder="Număr de telefon" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="tel" autocomplete="tel" placeholder="Număr de telefon" required>
                         </div>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Scrie un mesaj"></textarea>
-                        <button>Trimite mesaj</button>
+                        <textarea name="text" cols="30" rows="10" placeholder="Scrie un mesaj"></textarea>
+                        <button type="submit" name="mail">Trimite mesaj</button>
                     </form>
                 </div>
             </div>
@@ -155,9 +155,7 @@ require_once '../core/init.php';
     </main>
     <?php
     require './components/footer.php';
-    ?>
 
-    <?php
     require_once './components/imports.php';
     ?>
 </body>

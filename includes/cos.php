@@ -8,6 +8,7 @@
     <title>Florarie</title>
     <link rel="stylesheet" href="./style/cos.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <link rel="icon" type="image/svg+xml" href="./img/idk.svg">
 
     <!-- <script src="https://www.paypal.com/sdk/js?client-id"></script> -->
 
@@ -53,31 +54,31 @@
             if (Cos::Exists()) {
                 if (count(Cos::GetProduse())) {
                     foreach (Cos::GetProduse() as $produs) {
-                        $index++;
 
+                        $index++;
                         $item = $cos->getItem(array("id", "=", $produs));
+
 
                         $imgs = json_decode($item->imagini, true);
 
-
                         echo '
-                        <div class="prod produs-' . $index . ' ">
-                            <img src="' . $imgs[0] . '" />
-                            <div class="detalii">
-                                <h3>' . $item->nume . ' - ' . intval($item->pret, 10) *  intval($_SESSION["qty"][$_SESSION['user']][$item->id], 10) . ' RON </h3>
-                                <form method="POST" action="qt.php">
-                                    <input type="number" min="1" class="input" onchange="showTotal()" name="qt" value=' . $_SESSION["qty"][$_SESSION['user']][$item->id] . ' />
-                                    <input type="hidden" name="user" value="' . $_SESSION['user'] . '" />
-                                    <input type="hidden" name="id" value="' . $item->id . '" />
-                                    <button type="submit" name="submit" style="cursor:pointer;" >Change quantity </button>
-                                </form>
-                                <form method="POST" action="./deleteFromCard.php">
-                                    <input type="hidden" name="id" value="' . $item->id . '" />
-                                    <button  name="delete"> delete </button>
-                                </form>
+                            <div class="prod produs-' . $index . ' ">
+                                <img src="' . $imgs[0] . '" />
+                                <div class="detalii">
+                                    <h3>' . $item->nume . ' - ' . intval($item->pret, 10) *  intval($_SESSION["qty"][$_SESSION['user']][$item->id], 10) . ' RON </h3>
+                                    <form method="POST" action="qt.php">
+                                        <input type="number" min="1" class="input" onchange="showTotal()" name="qt" value=' . $_SESSION["qty"][$_SESSION['user']][$item->id] . ' />
+                                        <input type="hidden" name="user" value="' . $_SESSION['user'] . '" />
+                                        <input type="hidden" name="id" value="' . $item->id . '" />
+                                        <button type="submit" name="submit" style="cursor:pointer;" >Change quantity </button>
+                                    </form>
+                                    <form method="POST" action="./deleteFromCard.php">
+                                        <input type="hidden" name="id" value="' . $item->id . '" />
+                                        <button  name="delete"> delete </button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                        <hr>';
+                            <hr>';
                     }
                 }
             }
@@ -102,21 +103,21 @@
                 <h2>Total: </h2>
                 <div id="total"></div>
             </div>
+            <hr>
             <div class="info">
                 <p>
-                    * &nbsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sit magnam quos impedit autem neque. Unde velit sed mollitia ratione quos, est, maxime fuga illo vero ullam dicta praesentium ex?
+                    * Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sit magnam quos impedit autem neque. Unde velit sed mollitia ratione quos, est, maxime fuga illo vero ullam dicta praesentium ex?
                 </p>
             </div>
             <div class="oke">
-                <form action="" method="POST">
+                <form action="addComanda.php" method="POST">
                     <textarea name="note" placeholder="Note*"></textarea>
 
                     <h2>Info paypall</h2>
 
                     <input type="text" name="nr_card">
 
-                    <button>Trimite comanda</button>
-
+                    <button type="submit" name="submit">Trimite comanda</button>
                 </form>
             </div>
 

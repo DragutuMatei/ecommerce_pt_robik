@@ -3,6 +3,10 @@
 <?php
 
 require_once '../core/init.php';
+
+if (!Session::exists("adminSession")) {
+    Redirect::to("admini.php");
+}
 ?>
 
 <head>
@@ -13,6 +17,7 @@ require_once '../core/init.php';
     <title>Pagina de admin</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
@@ -26,104 +31,39 @@ require_once '../core/init.php';
     ?>
 
     <div style="width: 100vw;height:100px;"></div>
+    <form method="POST" action="addAdmin.php" enctype="multipart/form-data">
+        <h1>NU SCRIE CU "?" SAU EMOTICOANE</h1>
 
-    <!-- <figure class="snip1543">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample108.jpg" alt="sample108" />
-        <figcaption>
-            <h3>Inverness McKenzie</h3>
-            <p>The only skills I have the patience to learn are those that have no real application in life.</p>
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    <figure class="snip1543 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample100.jpg" alt="sample100" />
-        <figcaption>
-            <h3>Alan Fresco</h3>
-            <p>The real fun of living wisely is that you get to be smug about it.</p>
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    <figure class="snip1543"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample101.jpg" alt="sample101" />
-        <figcaption>
-            <h3>Indigo Violet</h3>
-            <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
-        </figcaption>
-        <a href="#"></a>
-    </figure> -->
-    <?php
+        <div class="mb-3">
+            <label for="nume" class="form-label">Scrie numele produsului</label>
+
+            <input type="text" class="form-control" name="nume">
+        </div>
+        <div class="mb-3">
+            <label for="descriere" class="form-label">Scrie descrierea produsului</label>
+            <textarea type="text" name="descriere" class="form-control"></textarea>
+
+        </div>
+        <div class="mb-3">
+            <label for="pret" class="form-label">Scrie pretul produsului</label>
+            <input type="number" class="form-control" name="pret">
 
 
-    if (Input::exists()) {
+        </div>
+        <div class="mb-3">
+            <label for="cantitate" class="form-label">Scrie ce cantitate ai momentan la acest produs</label>
+            <input type="number" class="form-control" name="cantitate">
 
-        if (Token::check(Input::get('token'))) {
-            $validate = new Validation();
+        </div>
+        <div class="mb-3">
+            <label for="imagini" class="form-label">Pune cate poze vrei pentru produs</label>
+            <input type="file" class="form-control" multiple name="imagini[]">
 
-            $validation = $validate->check($_POST, array(
-                "nume" => array(
-                    'required' => true,
-                ),
-                "descriere" => array(
-                    'required' => true,
-                ),
-                "pret" => array(
-                    "required" => true,
-                ),
-                "cantitate" => array(
-                    'required' => true,
-                ),
-            ));
+        </div>
 
-            if ($validation->passed()) {
-                $user = new User();
+        <input type="hidden" value="<?php echo Token::generate(); ?>" name="token" />
 
-                $files = array_filter($_FILES['imagini']['name']);
-                $cate_is = count($_FILES['imagini']['name']);
-
-                $array_cu_imag = array();
-
-                for ($i = 0; $i < $cate_is; $i++) {
-                    $temporale = $_FILES['imagini']['tmp_name'][$i];
-
-                    if ($temporale != "") {
-                        $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
-                        $newFilePath = "./img/" . $_FILES['imagini']['name'][$i];
-                        move_uploaded_file($temporale, $newFilePath);
-                    }
-                }
-
-                $imgs = array();
-                for ($i = 0; $i < count($array_cu_imag); $i++) {
-                    $imgs[$i] = $array_cu_imag[$i];
-                }
-
-                try {
-                    $user->addProdus(array(
-                        'produs_id' => uniqid(),
-                        'nume' => Input::get("nume"),
-                        'descriere' => Input::get("descriere"),
-                        'pret' => Input::get("pret"),
-                        'cantitate' => Input::get("cantitate"),
-                        'imagini' => json_encode($imgs)
-                    ));
-                } catch (Exception $e) {
-                    die($e->getMessage());
-                }
-            } else {
-                foreach ($validation->errors() as $error) {
-                    echo "<h2>" . $error . "</h2><br/>";
-                }
-            }
-        }
-    }
-    ?>
-
-    <form method="POST" enctype="multipart/form-data">
-        <input type="text" name="nume">
-        <textarea type="text" name="descriere"></textarea>
-        <input type="number" name="pret">
-        <input type="number" name="cantitate">
-        <input type="file" multiple name="imagini[]">
-        <input type="hidden" value="<?php echo Token::generate(); ?>" name="token">
-        <button type="submit">Submit</button>
+        <button class="btn btn-primary mb-3" type="submit">Submit</button>
     </form>
 
 
@@ -151,8 +91,8 @@ require_once '../core/init.php';
                             <input type='hidden' value=" . $floare->id . " />
 
                             <form action='delete.php' method='POST'>
-                            <input type='hidden' name='id' value=" . $floare->id . " />
-                            <button type='submit' name='submit'>Delete</button>
+                                <input type='hidden' name='id' value=" . $floare->id . " />
+                                <button type='submit' name='submit'>Delete</button>
                             </form>
                         </div>";
             }
@@ -217,6 +157,35 @@ require_once '../core/init.php';
 
             </div>
         </div>
+
+    <div class="mailuri">
+            <?php
+
+            $mail = new Mail();
+
+            $mailuri = $mail->getEmail();
+
+            foreach ($mailuri as $mails) {
+                echo '
+                    <div class="mail">
+                        <h2>' . $mails->nume . '</h2>
+                        <a href="mailto:' . $mails->email . '">' . $mails->email . '</a>
+                        <a href="tel:' . $mails->tel . '">' . $mails->tel . '</a>
+                        <p>' . $mails->text . '</p>
+                        <form action="deleteMail.php" method="POST">
+                            <input type="hidden" name="token" value="' . Token::generate() . '" />
+                            <input type="hidden" name="id" value="' . $mails->id . '" >
+                            <input type="submit" name="submit" value="Delete mail" />
+                        </form>
+                    </div>
+                    <hr>
+                    ';
+            }
+
+            ?>
+
+        </div>
+
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -392,7 +361,11 @@ require_once '../core/init.php';
         }
     </script>
 
+    <?php
+    require './components/footer.php';
 
+    require_once './components/imports.php';
+    ?>
 </body>
 
 </html>

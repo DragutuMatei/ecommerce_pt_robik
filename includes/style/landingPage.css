@@ -18,6 +18,8 @@
   background: rgba(255, 255, 255, 0.432);
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
+  -webkit-box-shadow: 0 0 10px 1px #00000059;
+          box-shadow: 0 0 10px 1px #00000059;
 }
 
 .header .logo {
@@ -78,23 +80,23 @@
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 1) {
-  -webkit-transition-delay: 0.44121s;
-          transition-delay: 0.44121s;
+  -webkit-transition-delay: 0.99646s;
+          transition-delay: 0.99646s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 2) {
-  -webkit-transition-delay: 0.49614s;
-          transition-delay: 0.49614s;
+  -webkit-transition-delay: 0.74092s;
+          transition-delay: 0.74092s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 3) {
-  -webkit-transition-delay: 0.55689s;
-          transition-delay: 0.55689s;
+  -webkit-transition-delay: 0.35655s;
+          transition-delay: 0.35655s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 4) {
-  -webkit-transition-delay: 0.3064s;
-          transition-delay: 0.3064s;
+  -webkit-transition-delay: 0.87246s;
+          transition-delay: 0.87246s;
 }
 
 .header .nav-links .nav-link a {
@@ -236,20 +238,20 @@
     transition: opacity 0.2s ease-in-out 1s, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s, -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 1) {
-    -webkit-transition-delay: 0.90077s;
-            transition-delay: 0.90077s;
+    -webkit-transition-delay: 0.2902s;
+            transition-delay: 0.2902s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 2) {
-    -webkit-transition-delay: 0.3678s;
-            transition-delay: 0.3678s;
+    -webkit-transition-delay: 0.65285s;
+            transition-delay: 0.65285s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 3) {
-    -webkit-transition-delay: 0.69941s;
-            transition-delay: 0.69941s;
+    -webkit-transition-delay: 0.61513s;
+            transition-delay: 0.61513s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 4) {
-    -webkit-transition-delay: 0.82995s;
-            transition-delay: 0.82995s;
+    -webkit-transition-delay: 0.8098s;
+            transition-delay: 0.8098s;
   }
   .header .menu-btn:checked ~ .menu-icon {
     border-radius: 90px;
@@ -575,7 +577,7 @@ footer .down h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 200px;
+  padding-bottom: 250px;
   position: relative;
 }
 

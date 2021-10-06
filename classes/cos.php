@@ -44,7 +44,8 @@ class Cos
 
     public function GetItem($params = array())
     {
-        $this->_db->get("flori", $params);
+        if ($this->_db->get("flori", $params) == [])
+            throw new Exception("nu mai e");
         return $this->_db->getFirst();
     }
 
@@ -62,5 +63,6 @@ class Cos
     public static function DeleteAll()
     {
         Session::delete("produse");
+        Session::delete("qty");
     }
 }
