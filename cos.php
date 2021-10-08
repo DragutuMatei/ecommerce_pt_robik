@@ -45,6 +45,17 @@
 
             <?php
 
+            if (isset($_GET['send']) && $_GET['send'] == "success") {
+                echo "
+                <script>
+                    alert('Comanda ta a fost plasată. Te rog să aștepți până te voi contacta! ');
+                    let url= new URL(window.location.href);
+                    let params = new URLSearchParams(url.search);
+                    params.delete('suceess');
+                </script>
+                ";
+            }
+
             $cos = new Cos();
 
             // $total = 0;

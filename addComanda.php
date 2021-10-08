@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
             "user" => Session::get(Config::get('session/session_name'))
         ));
         Cos::DeleteAll();
-        Redirect::to("cos.php?send='success'");
+        Redirect::to("cos.php?send=success");
     } catch (Exception $e) {
         echo $e->getMessage();
     }
