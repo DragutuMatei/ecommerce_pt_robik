@@ -298,7 +298,8 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                value.value = value_id;
+                if (value.value)
+                    value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
@@ -313,7 +314,8 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                value.value = value_id;
+                if (value.value)
+                    value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
