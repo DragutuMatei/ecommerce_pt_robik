@@ -119,7 +119,7 @@
 
                     $i = 0;
 
-                    if (count(Cos::GetProduse())) {
+                    if (Cos::GetProduse()) {
                         foreach (Cos::GetProduse() as $prod) {
                             $item = $cos->getItem(array("id", "=", $prod));
 

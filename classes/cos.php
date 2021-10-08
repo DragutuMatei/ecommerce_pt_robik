@@ -39,7 +39,11 @@ class Cos
 
     public static function GetProduse()
     {
-        return $_SESSION['produse'][$_SESSION['user']];
+        if(isset($_SESSION['produse'][$_SESSION['user']])){
+            return $_SESSION['produse'][$_SESSION['user']];
+        } else{
+            return false;
+        }
     }
 
     public function GetItem($params = array())
