@@ -23,6 +23,8 @@ class Mail
         }
     }
 
+
+    
     public function deleteEmail($id)
     {
         if (!$this->_db->delete("mail", array("id", "=", $id))) {
