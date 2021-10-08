@@ -80,26 +80,6 @@ class User
         if (!$this->_db->delete("flori", $fields)) {
             throw new Exception("nush ce are frt");
         }
-
-
-        // $users = $this->_db->get("users", array("id", ">=", "0"));
-        // $users = $users->results();
-
-
-        // for ($i = 0; $i < count($users); $i++) {
-        //     if (isset($_SESSION['produse'][$users[$i]->id][$fields[2]])) {
-        //         $pr = $_SESSION['produse'][$users[$i]->id][$fields[2]];
-
-        //         foreach ($_SESSION['produse'][$users[$i]->id][$pr] as $produs) {
-        //             if (isset($_SESSION['produse'][$users[$i]->id][$pr]))
-        //                 if ($produs == $pr) {
-        //                     unset($_SESSION['produse'][$users[$i]->id][$pr]);
-        //                     unset($_SESSION['qty'][$users[$i]->id][$pr]);
-        //                 }
-        //         }
-
-        // }
-        // }
     }
 
     public function data()

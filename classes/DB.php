@@ -47,7 +47,7 @@ class DB
         return $this;
     }
 
-    public function action($action, $table, $where = array())
+    public function action($action, $table, $where = array(), $idk = "")
     {
         if (count($where) == 3) {
             $operators = array('=', ">", "<", "<=", ">=");
@@ -56,7 +56,7 @@ class DB
             $value = $where[2];
 
             if (in_array($operator, $operators)) {
-                $sql = "{$action} FROM {$table} WHERE {$field} {$operator} ?";
+                $sql = "{$action} FROM {$table} WHERE {$field} {$operator} ? {$idk} ";
                 if (!$this->query($sql, array($value))->getError()) {
                     return $this;
                 }
@@ -81,9 +81,9 @@ class DB
         return $this->results()[0];
     }
 
-    public function get($table, $where)
+    public function get($table, $where, $idk = "")
     {
-        return $this->action('SELECT *', $table, $where);
+        return $this->action('SELECT *', $table, $where, $idk);
     }
 
     public function update($table, $id, $fields = array())
@@ -141,15 +141,6 @@ class DB
     public function delete($table, $where)
     {
         return $this->action('DELETE ', $table, $where);
-        // $operators = array('=', ">", "<", "<=", ">=");
-        // $field = $where[0];
-        // $operator = $where[1];
-        // $value = $where[2];
-
-        // $sql = "DELETE FROM {$table} WHERE {$field} {$operator} ?";
-        // if (!$this->query($sql, array($value))->getError()) {
-        //     return $this;
-        // }
     }
 
     public function count()

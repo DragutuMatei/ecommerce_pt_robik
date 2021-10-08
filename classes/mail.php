@@ -12,7 +12,7 @@ class Mail
 
     public function getEmail()
     {
-        $this->_rez = $this->_db->get("mail", array("id", ">=", "1"));
+        $this->_rez = $this->_db->get("mail", array("id", ">=", "1"), " ORDER BY id DESC");
         return $this->_rez->results();
     }
 
