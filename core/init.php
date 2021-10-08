@@ -17,7 +17,7 @@ $GLOBALS['config'] = array(
         'host' => 'eu-cdbr-west-01.cleardb.com',
         'username' => 'b193caa9e04491',
         'password' => '55d7b7bc',
-        'db' => 'heroku_2afb099aaeb61b6'
+        'db' => 'heroku_ffa7e0b75465646'
 
     ),
     'remember' => array(
