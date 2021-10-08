@@ -101,10 +101,23 @@
                             </button>
                              
                         </form> -->
+                        <?php
+                        $user = new User();
+                        if ($user->isLoggedIn()) {
+                            echo '
+                          
                         <form method="POST" action="./addToCard.php">
-                            <input type="hidden" name="item" class="value">
-                            <button name="add">Adaugă în coș</button>
-                        </form>
+                        <input type="hidden" name="item" class="value">
+                        <button name="add">Adaugă în coș</button>
+                    </form>      ';
+                        } else {
+                            echo '
+                            
+                        <form method="POST" action="./addToCard.php">
+                        <button name="add>Loghează-te ca să adaugi în coș</button>
+                    </form>';
+                        }
+                        ?>
                     </div>
                 </div>
                 <hr>
