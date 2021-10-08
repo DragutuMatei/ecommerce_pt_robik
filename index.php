@@ -24,7 +24,7 @@ require_once './core/init.php';
     ?>
 
     <?php
-    // require './components/navbar.php';
+    require './components/navbar.php';
     ?>
     <main>
 
