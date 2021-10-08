@@ -1,6 +1,6 @@
 <?php
-
 require_once './core/init.php';
+echo "sadasd";
 
 if (isset($_POST['add'])) {
     $user = new User();
