@@ -7,6 +7,7 @@ session_start();
 // $cleardb_password = $cleardb_url["pass"];
 // $cleardb_db = substr($cleardb_url["path"], 1);
 
+mysql://b193caa9e04491:55d7b7bc@eu-cdbr-west-01.cleardb.com/heroku_ffa7e0b75465646?reconnect=true
 $GLOBALS['config'] = array(
     "mysql" => array(
         // 'host' => $cleardb_server,
@@ -14,8 +15,8 @@ $GLOBALS['config'] = array(
         // 'password' => $cleardb_password,
         // 'db' => $cleardb_db
         'host' => 'eu-cdbr-west-01.cleardb.com',
-        'username' => 'bd168ab4a8dffd',
-        'password' => 'cd99342f',
+        'username' => 'b193caa9e04491',
+        'password' => '55d7b7bc',
         'db' => 'heroku_2afb099aaeb61b6'
 
     ),
