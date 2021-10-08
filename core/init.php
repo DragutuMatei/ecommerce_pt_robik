@@ -4,12 +4,22 @@ session_start();
 // session_unset();
 // session_set_cookie_params(3600 * 24);
 
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+
 $GLOBALS['config'] = array(
     "mysql" => array(
-        'host' => '127.0.0.1',
-        'username' => 'root',
-        'password' => '',
-        'db' => 'oop'
+        'host' => $cleardb_server,
+        'username' => $cleardb_username,
+        'password' => $cleardb_password,
+        'db' => $cleardb_db
+        // 'host' => '127.0.0.1',
+        // 'username' => 'root',
+        // 'password' => '',
+        // 'db' => 'oop'
 
     ),
     'remember' => array(
