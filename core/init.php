@@ -5,21 +5,21 @@ session_start();
 // session_set_cookie_params(3600 * 24);
 
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
+$cleardb_server = $cleardb_url["hostR"];
+$cleardb_username = $cleardb_url["userR"];
+$cleardb_password = $cleardb_url["passR"];
 $cleardb_db = substr($cleardb_url["path"],1);
 
 $GLOBALS['config'] = array(
     "mysql" => array(
-        // 'host' => $cleardb_server,
-        // 'username' => $cleardb_username,
-        // 'password' => $cleardb_password,
-        // 'db' => $cleardb_db
-        'host' => 'eu-cdbr-west-01.cleardb.com',
-        'username' => 'bd168ab4a8dffd',
-        'password' => 'cd99342f',
-        'db' => 'heroku_2afb099aaeb61b6'
+        'host' => $cleardb_server,
+        'username' => $cleardb_username,
+        'password' => $cleardb_password,
+        'db' => $cleardb_db
+        // 'host' => 'eu-cdbr-west-01.cleardb.com',
+        // 'username' => 'bd168ab4a8dffd',
+        // 'password' => 'cd99342f',
+        // 'db' => 'heroku_2afb099aaeb61b6'
 
     ),
     'remember' => array(
