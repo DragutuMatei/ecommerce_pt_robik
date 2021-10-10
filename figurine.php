@@ -277,7 +277,7 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                if (value.value != null)
+                if (value)
                     value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
