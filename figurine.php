@@ -189,7 +189,7 @@
             }
             ?>
         ]
-        console.assert(ArrayValue);
+        console.log(ArrayValue);
 
         const ArrayCantitate = [
             <?php
@@ -252,18 +252,7 @@
             }
             ?>
         ]
-
-
-        // document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
-        //     if (!button.classList.contains('loading')) {
-        //         close();
-        //         button.classList.add('loading');
-
-        //         setTimeout(() => button.classList.remove('loading'), 3700);
-        //     }
-
-        //     e.preventDefault();
-        // }));
+ 
 
 
         let a = true;
@@ -289,7 +278,7 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                if (value.value)
+                // if (value.value)
                     value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
@@ -299,13 +288,12 @@
                     img.classList = "swiper-slide";
                 }
                 button.disabled = false;
-
             } else {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                if (value.value)
+                // if (value.value)
                     value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
