@@ -286,7 +286,7 @@
                     imgs.appendChild(img);
                     img.classList = "swiper-slide";
                 }
-                button.disabled = false;
+                if(button)  button.disabled = false;
             } else {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
@@ -302,7 +302,7 @@
                     imgs.appendChild(img);
                     img.classList = "swiper-slide";
                 }
-                button.disabled = true;
+                if(button) button.disabled = true;
             }
         }
 
