@@ -16,7 +16,7 @@ class Comanda
             $qt = intval($nrQ[$i]);
             
             $itemDB = $this->_db->get("flori", array("nume", "=", $item));
-            $itemDB = $$itemDB->first();
+            $itemDB = $itemDB->first();
             $itemQT = intval($itemDB->cantitate);
             $newQT = $itemQT - $qt;
 
