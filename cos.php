@@ -51,7 +51,7 @@
                     alert('Comanda ta a fost plasată. Te rog să aștepți până te voi contacta! ');
                     let url= new URL(window.location.href);
                     let params = new URLSearchParams(url.search);
-                    params.delete('suceess');
+                    params.delete('send');
                 </script>
                 ";
             }

@@ -189,7 +189,6 @@
             }
             ?>
         ]
-        console.log(ArrayValue);
 
         const ArrayCantitate = [
             <?php
