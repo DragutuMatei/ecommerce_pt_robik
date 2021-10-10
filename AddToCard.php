@@ -7,14 +7,18 @@ if (isset($_POST['add'])) {
 
     $item = Input::get('item');
 
-    echo $item;
+    echo $item."<br>";
+
 
     if ($user->isLoggedIn()) {
         if (Cos::AddProduse($item)) {
-            Redirect::to('figurine.php');
+            // Redirect::to('figurine.php');
         } else {
             echo "meci mai prst :))), idk ce are";
         }
+    
+        echo $_SESSION['produse'][$_SESSION['user']][$item];
+
     }
 } else {
     echo "asd";
