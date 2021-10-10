@@ -9,10 +9,29 @@ class Comanda
         $this->_db = DB::getInstance();
     }
 
-    public function addComanda($field = array())
+    private function deleteProduseFromDb($numeP, $nrQ, $t)
     {
+        for ($i = 0; $i < $t; $i++) {
+            $item = $numeP[$i];
+            $qt = intval($nrQ[$i]);
+            
+            $itemDB = $this->_db->get("flori", array("nume", "=", $item));
+            $itemDB = $$itemDB->first();
+            $itemQT = intval($itemDB->cantitate);
+            $newQT = $itemQT - $qt;
+
+            if(!$this->_db->update("flori", $itemDB->id, array("cantitate"=>$newQT))){
+                throw new Exception("Nu le da jos");
+            }
+
+        }
+    }
+
+    public function addComanda($field = array(), $numeP, $nrQ, $t)
+    {
+        $this->deleteProduseFromDb($numeP, $nrQ, $t);
         if (!$this->_db->insert("comenzi", $field)) {
-            throw new Exception("nu vr el sa mearga");
+            throw new Exception("Nu vr el sa mearga");
         }
     }
 

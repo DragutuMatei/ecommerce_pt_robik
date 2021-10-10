@@ -105,7 +105,7 @@
                         } else {
                             echo '
                             
-                        <a style="color:black, text-decoration:none; font-size: 20px" href="login.php">Loghează-te ca să adaugi în coș</a>
+                        <a style="color:black; text-decoration:none; font-size: 20px" href="login.php">Loghează-te ca să adaugi în coș</a>
                      ';
                         }
                         ?>
@@ -277,7 +277,7 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                // if (value.value)
+                if (value.value)
                     value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
@@ -293,6 +293,7 @@
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
                 // if (value.value)
+                console.log("ASdasdasdasd");
                     value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
