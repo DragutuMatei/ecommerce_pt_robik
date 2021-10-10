@@ -9,13 +9,13 @@ class Comanda
         $this->_db = DB::getInstance();
     }
 
-    private function deleteProduseFromDb($numeP, $nrQ, $t)
+    private function deleteProduseFromDb($idP, $nrQ, $t)
     {
         for ($i = 0; $i < $t; $i++) {
-            $item = $numeP[$i];
+            $item = $idP[$i];
             $qt = intval($nrQ[$i]);
             
-            $itemDB = $this->_db->get("flori", array("nume", "=", $item));
+            $itemDB = $this->_db->get("flori", array("id", "=", $item));
             $itemDB = $itemDB->first();
             $itemQT = intval($itemDB->cantitate);
             $newQT = $itemQT - $qt;
@@ -27,9 +27,9 @@ class Comanda
         }
     }
 
-    public function addComanda($field = array(), $numeP, $nrQ, $t)
+    public function addComanda($field = array(), $idP, $nrQ, $t)
     {
-        $this->deleteProduseFromDb($numeP, $nrQ, $t);
+        $this->deleteProduseFromDb($idP, $nrQ, $t);
         if (!$this->_db->insert("comenzi", $field)) {
             throw new Exception("Nu vr el sa mearga");
         }

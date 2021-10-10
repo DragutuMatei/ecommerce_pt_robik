@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
             "note" => Input::get("note"),
             "confirm" => Input::get("confirm"),
             "user" => Session::get(Config::get('session/session_name'))
-        ),$array_ids, $array_qt, Input::get("total"));
+        ), $array_ids, $array_qt, Input::get("total"));
 
         Cos::DeleteAll();
         Redirect::to("cos.php?send=success");
