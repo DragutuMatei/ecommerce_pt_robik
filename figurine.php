@@ -105,7 +105,7 @@
                         } else {
                             echo '
                             
-                        <a href="login.php">Loghează-te ca să adaugi în coș</a>
+                        <a style="color:black, text-decoration:none; font-size: 20px" href="login.php">Loghează-te ca să adaugi în coș</a>
                      ';
                         }
                         ?>
@@ -298,8 +298,8 @@
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
                     img.setAttribute("src", imgsArr[i]);
-
                     imgs.appendChild(img);
+                    img.classList = "swiper-slide";
                 }
                 button.disabled = true;
             }
