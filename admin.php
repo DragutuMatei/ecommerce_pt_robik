@@ -85,7 +85,7 @@ if (!Session::exists("adminSession")) {
                 echo   "<div class='floare'>
                             <div class='effect'></div>
                             <img src='" . $img . "' alt=''>
-                            <h2>" . $floare->nume . "</h2>
+                            <h2>" . $floare->nume . " - ".$floare->cantitate."</h2>
                             <h2 class='more' >Citeste mai mult</h2>
                             <input type='hidden' value=" . $floare->id . " />
 
