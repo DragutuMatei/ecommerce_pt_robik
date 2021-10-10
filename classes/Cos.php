@@ -50,7 +50,7 @@ class Cos
     {
         if ($this->_db->get("flori", $params) == [])
             throw new Exception("nu mai e");
-        return $this->_db->getFirst();
+        return $this->_db->first();
     }
 
     public static function DeleteProdus($id)

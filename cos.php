@@ -67,8 +67,8 @@
                     foreach (Cos::GetProduse() as $produs) {
 
                         $index++;
-                        $item = $cos->getItem(array("id", "=", $produs));
-
+                        $item = $cos->GetItem(array("id", "=", $produs));
+                        
 
                         $imgs = json_decode($item->imagini, true);
 
