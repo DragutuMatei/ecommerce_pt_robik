@@ -189,6 +189,7 @@
             }
             ?>
         ]
+        console.assert(ArrayValue);
 
         const ArrayCantitate = [
             <?php
