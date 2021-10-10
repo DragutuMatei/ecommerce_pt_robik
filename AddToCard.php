@@ -10,7 +10,7 @@ if (isset($_POST['add'])) {
     echo $item;
 
     if ($user->isLoggedIn()) {
-        if (Cos::AddProduse($item, $user->id)) {
+        if (Cos::AddProduse($item)) {
             Redirect::to('figurine.php');
         } else {
             echo "meci mai prst :))), idk ce are";

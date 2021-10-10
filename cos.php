@@ -58,8 +58,6 @@
 
             $cos = new Cos();
 
-            // $total = 0;
-
             $index = 0;
 
             if (Cos::Exists()) {

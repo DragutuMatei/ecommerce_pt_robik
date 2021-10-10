@@ -92,15 +92,7 @@
                         <h2 class="pret"></h2>
                     </div>
                     <div class="t" style="justify-content: center;">
-                        <!-- <form method="POST" action="./addToCard.php">
-                             
-                            <input type="hidden" name="item" class="value">
-
-                            <button name="add"  class="more">
-                                Adaugă în coș
-                            </button>
-                             
-                        </form> -->
+           
                         <?php
                         $user = new User();
                         if ($user->isLoggedIn()) {
@@ -291,8 +283,6 @@
         x.addEventListener("click", close);
 
         function mare(tit_string, txt_string, imgsArr, cantitate, pret_int, value_id) {
-
-
             if (cantitate > 0) {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
