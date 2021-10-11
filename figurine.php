@@ -128,7 +128,7 @@
             <div class="content" style="flex-wrap: nowrap; width:100vw; justify-content: space-around;">
                 <div class="txt">
                     <form action="mail.php" method="POST">
-                        <h2>Pentru sugestii, ne puteti contacta prin formularul de mai jos</h2>
+                        <h2>Ai in gand alta figurina? Completeaza formularul si asteapta mesajul meu</h2>
                         <div class="row">
                             <input type="text" name="nume" placeholder="Nume" required>
                             <input type="text" name="prenume" placeholder="Prenume" required>
@@ -137,7 +137,7 @@
                             <input type="email" name="email" placeholder="Email" required>
                             <input type="tel" name="tel" autocomplete="tel" placeholder="Număr de telefon" required>
                         </div>
-                        <textarea name="text" cols="30" rows="10" placeholder="Scrie un mesaj"></textarea>
+                        <textarea name="text" cols="30" rows="10" placeholder="Descrie figurina"></textarea>
                         <button type="submit" name="mail">Trimite comanda și așteaptă mesajul meu</button>
                     </form>
                 </div>

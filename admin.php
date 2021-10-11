@@ -74,8 +74,6 @@ if (!Session::exists("adminSession")) {
             $flori = $db->get("flori", array("id", ">=", "1"));
 
             $flori = $flori->results();
-
-
             $array_cu_img = array();
 
 
