@@ -69,10 +69,7 @@
             <div class="cont">
 
                 <div class="swiper-container idk">
-                    <div class="swiper-wrapper">
-                        <!-- <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div> -->
+                    <div class="swiper-wrapper"> 
                     </div>
 
                     <div style="color:#ff6c00" class="swiper-pagination"></div>

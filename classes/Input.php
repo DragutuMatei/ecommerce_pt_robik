@@ -9,7 +9,6 @@ class Input
                 break;
             case 'get';
                 return (!empty($_GET)) ? true : false;
-
                 break;
 
             default:

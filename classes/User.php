@@ -50,7 +50,6 @@ class User
         if ($user) {
             if (trim($this->data()->parola) === trim(hash("sha256", trim($parola) . trim($this->data()->salt)))) {
                 Session::put($this->_sessionName, $this->data()->id);
-
                 return true;
             }
         }

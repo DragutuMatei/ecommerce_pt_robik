@@ -31,11 +31,8 @@ require_once './core/init.php';
         <section class="firstPage">
             <div class="content">
                 <div class="txtCenter">
-                    <h1>Bine ai venit la floraria <br><span>Florarie mamei</span> </h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est explicabo iusto, modi culpa nihil
-                        expedita
-                        dignissimos deleniti, fugiat quos ex neque quisquam hic illum quo illo ullam! Aliquid, labore
-                        perspiciatis.
+                    <h1>Bun venit la atelierul de creatie <br><span>Punktuletz</span> </h1>
+                    <p>NU UITA SA PUI PRETU CA DECIMAL IN BAZA DE DATE
                     </p>
                 </div>
                 <div class="log">

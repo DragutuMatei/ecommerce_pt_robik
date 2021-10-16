@@ -6,7 +6,8 @@ class Session
         return $_SESSION[$name] = $value;
     }
 
-    public static function putArray($name1, $name2, $value){
+    public static function putArray($name1, $name2, $value)
+    {
         return $_SESSION[$name1][$name2] = $value;
     }
 
