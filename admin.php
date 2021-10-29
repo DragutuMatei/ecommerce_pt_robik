@@ -279,7 +279,7 @@ if (!Session::exists("adminSession")) {
 
     <script>
         const swiper = new Swiper('.swiper-container', {
-            loop: true,
+            loop: false,
 
             pagination: {
                 el: '.swiper-pagination',
