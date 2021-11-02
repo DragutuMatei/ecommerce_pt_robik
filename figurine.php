@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="./style/flori.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyJjeynZiCrmE-tRu6TlCdhTNyMe9ghIo&callback=initMap&libraries=&v=weekly" defer></script>
     <link rel="stylesheet" href="./style/landingPage.css">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
