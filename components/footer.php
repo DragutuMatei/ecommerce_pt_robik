@@ -39,19 +39,19 @@
         <h2>Copyright ©2021 Florăria de la parc | All rights reserved</h2>
     </div>
     <script>
-        function initMap() {
-            const uluru = {
-                lat: 44.4267674,
-                lng: 26.10253839
-            };
+        // function initMap() {
+        //     const uluru = {
+        //         lat: 44.4267674,
+        //         lng: 26.10253839
+        //     };
 
-            const map = new google.maps.Map(
-                document.getElementById("map"), {
-                    zoom: 4,
-                    center: uluru,
-                }
-            );
-        }
+        //     const map = new google.maps.Map(
+        //         document.getElementById("map"), {
+        //             zoom: 4,
+        //             center: uluru,
+        //         }
+        //     );
+        // }
     </script>
 </footer>
 <!-- site facut de Dragutu Matei 

@@ -32,8 +32,8 @@ require_once './core/init.php';
             <div class="content">
                 <div class="txtCenter">
                     <h1>Bun venit la atelierul de creatie <br><span>Punktuletz</span> </h1>
-                    <p>NU UITA SA PUI PRETU CA DECIMAL IN BAZA DE DATE
-                    </p>
+                    <!-- <p>NU UITA SA PUI PRETU CA DECIMAL IN BAZA DE DATE
+                    </p> -->
                 </div>
                 <div class="log">
                     <!-- <img src="./img/idk.svg" alt=""> -->
