@@ -148,7 +148,7 @@
         const swiper = new Swiper('.swiper-container', {
             // Optional parameters
             // direction: 'vertical',
-            loop: true,
+            loop: false,
 
             // If we need pagination
             pagination: {
