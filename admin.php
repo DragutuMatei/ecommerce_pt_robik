@@ -55,7 +55,7 @@ if (!Session::exists("adminSession")) {
         </div>
         <div class="mb-3">
             <label for="imagini" class="form-label">Pune cate poze vrei pentru produs</label>
-            <input type="file" class="form-control" multiple name="imagini">
+            <input type="file" class="form-control" multiple name="imagini[]">
 
         </div>
 
