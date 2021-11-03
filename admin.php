@@ -31,7 +31,7 @@ if (!Session::exists("adminSession")) {
 
     <div style="width: 100vw;height:100px;"></div>
     <form method="POST" action="addAdmin.php" enctype="multipart/form-data">
-        <h1>NU SCRIE CU "?" SAU EMOTICOANE</h1>
+        <h1>NU SCRIE CU "?" SAU EMOTICOANE SAU CU " SAU '</h1>
 
         <div class="mb-3">
             <label for="nume" class="form-label">Scrie numele produsului</label>
@@ -195,7 +195,7 @@ if (!Session::exists("adminSession")) {
                         <p>' . $com->note . '</p>
                         <hr>
                         <div class="user">
-                        <h2>' . $user->email . ' | ' . $user->telefon . ' </h2>
+                        <h2 style="text-transform:uppercase;">' . $user->email . ' | ' . $user->telefon . ' </h2>
                         <h2> validare: ' . $com->confirm . '</h2>
                         </div>
                         <form action="deleteComanda.php" method="POST">
