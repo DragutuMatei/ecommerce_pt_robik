@@ -155,7 +155,7 @@
                         foreach (Cos::GetProduse() as $prod) {
                             $item = $cos->getItem(array("id", "=", $prod));
 
-                            echo '<input type="hidden" name="qt' . $i . '" value="' . floatval($_SESSION["qty"][$_SESSION['user']][$item->id], 10) . '" />';
+                            echo '<input type="hidden" name="qt' . $i . '" value="' . intval($_SESSION["qty"][$_SESSION['user']][$item->id]) . '" />';
                             echo    '<input type="hidden" name="produse' . $i . '" value="' . $prod . '">
                             ';
                             $i++;

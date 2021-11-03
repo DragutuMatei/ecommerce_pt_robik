@@ -42,7 +42,7 @@ class Cos
         if(isset($_SESSION['produse'][$_SESSION['user']])){
             return $_SESSION['produse'][$_SESSION['user']];
         } else{
-            return false;
+            return [];
         }
     }
 
