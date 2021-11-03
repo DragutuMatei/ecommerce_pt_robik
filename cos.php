@@ -181,7 +181,6 @@
 
         const prod = document.querySelectorAll(".input");
 
-        console.log("try me mf");
 
         var arrCuQTY = [];
 
@@ -192,7 +191,7 @@
                     foreach (Cos::GetProduse() as $produs) {
                         $item = $cos->getItem(array("id", "=", $produs));
 
-                        echo intval($item->pret, 10) . ", ";
+                        echo floatval($item->pret) . ", ";
                     }
             ?>
         ];
@@ -211,7 +210,6 @@
 
             for (let i = 0; i < CATE_IS; i++) {
                 all += arrCuQTY[i] * pret[i];
-                console.log(all);
             }
             total.innerHTML = all + " RON";
         }
