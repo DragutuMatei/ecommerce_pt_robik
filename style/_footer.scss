@@ -31,7 +31,8 @@ footer {
         lord-icon {
           margin-right: 30px;
         }
-        p, a {
+        p,
+        a {
           font-size: 15px;
           color: white;
           font-family: $roboto;
@@ -49,11 +50,8 @@ footer {
       a {
         border-radius: 90%;
         margin: 20px;
-
-        svg {
-          width: 40px;
-          height: 40px;
-        }
+        color: white;
+        font-size: 46px;
       }
     }
   }

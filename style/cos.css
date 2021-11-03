@@ -80,23 +80,23 @@
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 1) {
-  -webkit-transition-delay: 0.73264s;
-          transition-delay: 0.73264s;
+  -webkit-transition-delay: 0.85193s;
+          transition-delay: 0.85193s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 2) {
-  -webkit-transition-delay: 0.45814s;
-          transition-delay: 0.45814s;
+  -webkit-transition-delay: 0.23866s;
+          transition-delay: 0.23866s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 3) {
-  -webkit-transition-delay: 0.37943s;
-          transition-delay: 0.37943s;
+  -webkit-transition-delay: 0.03171s;
+          transition-delay: 0.03171s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 4) {
-  -webkit-transition-delay: 0.41733s;
-          transition-delay: 0.41733s;
+  -webkit-transition-delay: 0.02921s;
+          transition-delay: 0.02921s;
 }
 
 .header .nav-links .nav-link a {
@@ -238,20 +238,20 @@
     transition: opacity 0.2s ease-in-out 1s, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s, -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 1) {
-    -webkit-transition-delay: 0.21449s;
-            transition-delay: 0.21449s;
+    -webkit-transition-delay: 0.53118s;
+            transition-delay: 0.53118s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 2) {
-    -webkit-transition-delay: 0.0115s;
-            transition-delay: 0.0115s;
+    -webkit-transition-delay: 0.62717s;
+            transition-delay: 0.62717s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 3) {
-    -webkit-transition-delay: 0.35816s;
-            transition-delay: 0.35816s;
+    -webkit-transition-delay: 0.17365s;
+            transition-delay: 0.17365s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 4) {
-    -webkit-transition-delay: 0.5868s;
-            transition-delay: 0.5868s;
+    -webkit-transition-delay: 0.67245s;
+            transition-delay: 0.67245s;
   }
   .header .menu-btn:checked ~ .menu-icon {
     border-radius: 90px;
@@ -402,7 +402,8 @@ footer .up .leftFooter .linie lord-icon {
   margin-right: 30px;
 }
 
-footer .up .leftFooter .linie p, footer .up .leftFooter .linie a {
+footer .up .leftFooter .linie p,
+footer .up .leftFooter .linie a {
   font-size: 15px;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -425,11 +426,8 @@ footer .up .centerFooter {
 footer .up .centerFooter a {
   border-radius: 90%;
   margin: 20px;
-}
-
-footer .up .centerFooter a svg {
-  width: 40px;
-  height: 40px;
+  color: white;
+  font-size: 46px;
 }
 
 footer .down {
