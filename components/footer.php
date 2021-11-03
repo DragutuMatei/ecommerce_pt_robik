@@ -9,7 +9,7 @@
             <div class="linie">
                 <lord-icon src="https://cdn.lordicon.com//hciqteio.json" trigger="loop" colors="primary:#121331,secondary:#ff6c00" style="width:60px;height:60px">
                 </lord-icon>
-                <p> </p>
+                <p> Seriozitate și întelegere </p>
             </div>
             <div class="linie">
                 <lord-icon src="https://cdn.lordicon.com//rhvddzym.json" trigger="loop" colors="primary:#121331,secondary:#ff6c00" style="width:60px;height:60px">
