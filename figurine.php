@@ -28,7 +28,7 @@
 
 
     <main>
-        <div class="headerproduse">
+        <div class="headerFlori">
             <div class="layer"></div>
             <div class="incadrare">
                 <h1>cele mai blana produse furate <br /> la tigani</h1>
@@ -68,7 +68,7 @@
             <div class="cont">
 
                 <div class="swiper-container idk">
-                    <div class="swiper-wrapper"> 
+                    <div class="swiper-wrapper">
                     </div>
 
                     <div style="color:#ff6c00" class="swiper-pagination"></div>
@@ -88,7 +88,7 @@
                         <h2 class="pret"></h2>
                     </div>
                     <div class="t" style="justify-content: center;">
-           
+
                         <?php
                         $user = new User();
                         if ($user->isLoggedIn()) {
@@ -192,7 +192,7 @@
                 echo "'" . $floare->cantitate . "', ";
             }
             ?>
-        ];;
+        ];
 
         document.addEventListener("keydown", closespec);
 
@@ -247,7 +247,7 @@
             }
             ?>
         ]
- 
+
 
 
         let a = true;
@@ -306,7 +306,8 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                value.value = value_id;
+                if (value)
+                    value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
@@ -321,7 +322,8 @@
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                value.value = value_id;
+                if (value)
+                    value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
