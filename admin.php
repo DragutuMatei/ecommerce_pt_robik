@@ -195,7 +195,7 @@ if (!Session::exists("adminSession")) {
                         <p>' . $com->note . '</p>
                         <hr>
                         <div class="user">
-                        <h2 style="text-transform:uppercase;">' . $user->email . ' | ' . $user->telefon . ' </h2>
+                        <h2>email & telefon: ' . $user->email . ' | ' . $user->telefon . ' </h2>
                         <h2> validare: ' . $com->confirm . '</h2>
                         </div>
                         <form action="deleteComanda.php" method="POST">
