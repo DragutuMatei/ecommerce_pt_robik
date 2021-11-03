@@ -138,7 +138,7 @@
             <hr>
             <div class="info">
                 <p>
-                    * Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sit magnam quos impedit autem neque. Unde velit sed mollitia ratione quos, est, maxime fuga illo vero ullam dicta praesentium ex?
+                    * Daca mai ai altceva de adăugat, te rog să scrii aici sau pe email. După ce vei plasa comanda te voi contacta în cel mai scurt timp posibil.
                 </p>
             </div>
             <div class="oke">
@@ -174,8 +174,6 @@
 
     <br><br><br>
     <br><br><br>
-
-
 
     <script>
         const total = document.querySelector("#total");
