@@ -188,7 +188,7 @@ if (!Session::exists("adminSession")) {
                     foreach ($produse as $produs) {
                         echo "<h6>" . $produs->nume . " - " . floatval($produs->pret) * intval($qts[$i]) . " RON - " . intval($qts[$i]) . " bucati</h6>";
                         $i++;
-                        $total += floatval($produs->pret) * intval($qts[$i]);
+                        $total += (floatval($produs->pret) * intval($qts[$i]));
                     }
 
                     echo '
