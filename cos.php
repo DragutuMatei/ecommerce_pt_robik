@@ -181,6 +181,8 @@
 
         const prod = document.querySelectorAll(".input");
 
+        console.log("try me mf");
+
         var arrCuQTY = [];
 
         let pret = [
