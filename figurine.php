@@ -268,39 +268,6 @@
         x.addEventListener("click", close);
 
         function mare(tit_string, txt_string, imgsArr, cantitate, pret_int, value_id) {
-            // if (cantitate > 0) {
-            //     openMore.style.display = "flex";
-            //     titlu.innerHTML = tit_string;
-            //     txt.innerHTML = txt_string;
-            //     pret.innerHTML = pret_int + " RON";
-            //     if (value)
-            //         value.value = value_id;
-
-            //     for (let i = 0; i < imgsArr.length; i++) {
-            //         let img = document.createElement("img");
-            //         img.setAttribute("src", imgsArr[i]);
-            //         imgs.appendChild(img);
-            //         img.classList = "swiper-slide";
-            //     }
-            //     if(button)  button.disabled = false;
-            // } else {
-            //     openMore.style.display = "flex";
-            //     titlu.innerHTML = tit_string;
-            //     txt.innerHTML = txt_string;
-            //     pret.innerHTML = pret_int + " RON";
-            //     // if (value.value)
-            //     console.log("ASdasdasdasd");
-            //         value.value = value_id;
-
-            //     for (let i = 0; i < imgsArr.length; i++) {
-            //         let img = document.createElement("img");
-            //         img.setAttribute("src", imgsArr[i]);
-            //         imgs.appendChild(img);
-            //         img.classList = "swiper-slide";
-            //     }
-            //     if(button) button.disabled = true;
-            // }
-
             if (cantitate > 0) {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
@@ -315,24 +282,57 @@
                     imgs.appendChild(img);
                     img.classList = "swiper-slide";
                 }
-                button.disabled = false;
-
+                if (button) button.disabled = false;
             } else {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                if (value)
+                if (value.value)
+                    // console.log("ASdasdasdasd");
                     value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
                     img.setAttribute("src", imgsArr[i]);
-
                     imgs.appendChild(img);
+                    img.classList = "swiper-slide";
                 }
-                button.disabled = true;
+                if (button) button.disabled = true;
             }
+
+            // if (cantitate > 0) {
+            //     openMore.style.display = "flex";
+            //     titlu.innerHTML = tit_string;
+            //     txt.innerHTML = txt_string;
+            //     pret.innerHTML = pret_int + " RON";
+            //     if (value)
+            //         value.value = value_id;
+
+            //     for (let i = 0; i < imgsArr.length; i++) {
+            //         let img = document.createElement("img");
+            //         img.setAttribute("src", imgsArr[i]);
+            //         imgs.appendChild(img);
+            //         img.classList = "swiper-slide";
+            //     }
+            //     button.disabled = false;
+
+            // } else {
+            //     openMore.style.display = "flex";
+            //     titlu.innerHTML = tit_string;
+            //     txt.innerHTML = txt_string;
+            //     pret.innerHTML = pret_int + " RON";
+            //     if (value)
+            //         value.value = value_id;
+
+            //     for (let i = 0; i < imgsArr.length; i++) {
+            //         let img = document.createElement("img");
+            //         img.setAttribute("src", imgsArr[i]);
+
+            //         imgs.appendChild(img);
+            //     }
+            //     button.disabled = true;
+            // }
         }
 
         function close() {

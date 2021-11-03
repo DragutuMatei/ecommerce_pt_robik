@@ -83,7 +83,7 @@ if (!Session::exists("adminSession")) {
                             <div class='effect'></div>
                             <img src='" . $img . "' alt=''>
                             <h2>" . $floare->nume . "</h2>
-                            <h2>".$floare->cantitate." de produse ramase</h2>
+                            <h2>" . $floare->cantitate . " de produse ramase</h2>
                             <h2 class='more' >Citeste mai mult</h2>
                             <input type='hidden' value=" . $floare->id . " />
 
@@ -406,14 +406,13 @@ if (!Session::exists("adminSession")) {
         x.addEventListener("click", close);
 
         function mare(tit_string, txt_string, imgsArr, cantitate, pret_int, value_id) {
-
-
             if (cantitate > 0) {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                value.value = value_id;
+                if (value)
+                    value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
@@ -421,23 +420,55 @@ if (!Session::exists("adminSession")) {
                     imgs.appendChild(img);
                     img.classList = "swiper-slide";
                 }
-                button.disabled = false;
-
+                if (button) button.disabled = false;
             } else {
                 openMore.style.display = "flex";
                 titlu.innerHTML = tit_string;
                 txt.innerHTML = txt_string;
                 pret.innerHTML = pret_int + " RON";
-                value.value = value_id;
+                if (value.value)
+                    // console.log("ASdasdasdasd");
+                    value.value = value_id;
 
                 for (let i = 0; i < imgsArr.length; i++) {
                     let img = document.createElement("img");
                     img.setAttribute("src", imgsArr[i]);
-
                     imgs.appendChild(img);
+                    img.classList = "swiper-slide";
                 }
-                button.disabled = true;
+                if (button) button.disabled = true;
             }
+
+            // if (cantitate > 0) {
+            //     openMore.style.display = "flex";
+            //     titlu.innerHTML = tit_string;
+            //     txt.innerHTML = txt_string;
+            //     pret.innerHTML = pret_int + " RON";
+            //     value.value = value_id;
+
+            //     for (let i = 0; i < imgsArr.length; i++) {
+            //         let img = document.createElement("img");
+            //         img.setAttribute("src", imgsArr[i]);
+            //         imgs.appendChild(img);
+            //         img.classList = "swiper-slide";
+            //     }
+            //     button.disabled = false;
+
+            // } else {
+            //     openMore.style.display = "flex";
+            //     titlu.innerHTML = tit_string;
+            //     txt.innerHTML = txt_string;
+            //     pret.innerHTML = pret_int + " RON";
+            //     value.value = value_id;
+
+            //     for (let i = 0; i < imgsArr.length; i++) {
+            //         let img = document.createElement("img");
+            //         img.setAttribute("src", imgsArr[i]);
+
+            //         imgs.appendChild(img);
+            //     }
+            //     button.disabled = true;
+            // }
         }
 
         function close() {
