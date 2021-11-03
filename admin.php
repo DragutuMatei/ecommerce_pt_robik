@@ -184,7 +184,7 @@ if (!Session::exists("adminSession")) {
                     <div class="comanda" style="margin:0 50px" ><div class="produse" >';
 
                     $i = 0;
-                    $total = 10;
+                    $total = 0;
                     foreach ($produse as $produs) {
                         $prett =  floatval($produs->pret) * intval($qts[$i]);
                         echo "<h6>" . $produs->nume . " - " . $prett . " RON - " . intval($qts[$i]) . " bucati</h6>";
