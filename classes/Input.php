@@ -25,13 +25,19 @@ class Input
         }
         return '';
     }
-
+    public static function getFILE($item)
+    {
+        if (isset($_FILES[$item])) {
+            return $_FILES[$item];
+        }
+        return '';
+    }
     public static function moveImg($names = array())
     {
         foreach ($names as $name)
             move_uploaded_file(
                 $_FILES[$name]["tmp_name"],
-                "../assets/img/" . $_FILES[$name]['name']
+                "./img/" . $_FILES[$name]['name']
             );
     }
 }

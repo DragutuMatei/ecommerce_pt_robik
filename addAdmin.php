@@ -25,31 +25,34 @@ if (Input::exists()) {
     if ($validation->passed()) {
         $user = new User();
 
-        $files = array_filter($_FILES['imagini']['name']);
+        // $files = array_filter($_FILES['imagini']['name']);
         $cate_is = count($_FILES['imagini']['name']);
 
         $array_cu_imag = array();
 
+        $array_cu_nume = array();
         for ($i = 0; $i < $cate_is; $i++) {
-            $temporale = $_FILES['imagini']['tmp_name'][$i];
-            echo $_FILES['imagini']['tmp_name'][$i] . "<br>";
+            // $temporale = $_FILES['imagini']['tmp_name'][$i];
+            // echo $_FILES['imagini']['tmp_name'][$i] . "<br>";
 
-            if ($temporale != "") {
-                $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
-                $newFilePath = "./imgs/" . $_FILES['imagini']['name'][$i];
-                if (move_uploaded_file($temporale, $newFilePath)) {
-                    echo $temporale . "<br>";
-                }
-            }
+            // if ($temporale != "") {
+            $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
+            //     $newFilePath = "./imgs/" . $_FILES['imagini']['name'][$i];
+            //     if (move_uploaded_file($temporale, $newFilePath)) {
+            //         echo $temporale . "<br>";
+            //     }
+            // }
+
+            $array_cu_nume[$i] = $_FILES['imagini']['name'][$i];
         }
+
+        Input::moveImg($array_cu_nume);
 
         $imgs = array();
         for ($i = 0; $i < count($array_cu_imag); $i++) {
             $imgs[$i] = $array_cu_imag[$i];
-            echo $imgs[$i] . "<br>";
         }
 
-        echo "plm";
 
         try {
             $user->addProdus(array(
