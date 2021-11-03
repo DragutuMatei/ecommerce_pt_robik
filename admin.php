@@ -282,17 +282,22 @@ if (!Session::exists("adminSession")) {
 
     <script>
         const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            // direction: 'vertical',
             loop: false,
 
+            // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
             },
 
+            // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
 
+            // And if we need scrollbar
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
@@ -323,7 +328,7 @@ if (!Session::exists("adminSession")) {
                 echo "'" . $floare->cantitate . "', ";
             }
             ?>
-        ];;
+        ];
 
         document.addEventListener("keydown", closespec);
 
@@ -379,17 +384,6 @@ if (!Session::exists("adminSession")) {
             ?>
         ]
 
-
-        // document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
-        //     if (!button.classList.contains('loading')) {
-        //         close();
-        //         button.classList.add('loading');
-
-        //         setTimeout(() => button.classList.remove('loading'), 3700);
-        //     }
-
-        //     e.preventDefault();
-        // }));
 
 
         let a = true;
@@ -448,7 +442,8 @@ if (!Session::exists("adminSession")) {
             //     titlu.innerHTML = tit_string;
             //     txt.innerHTML = txt_string;
             //     pret.innerHTML = pret_int + " RON";
-            //     value.value = value_id;
+            //     if (value)
+            //         value.value = value_id;
 
             //     for (let i = 0; i < imgsArr.length; i++) {
             //         let img = document.createElement("img");
@@ -463,7 +458,8 @@ if (!Session::exists("adminSession")) {
             //     titlu.innerHTML = tit_string;
             //     txt.innerHTML = txt_string;
             //     pret.innerHTML = pret_int + " RON";
-            //     value.value = value_id;
+            //     if (value)
+            //         value.value = value_id;
 
             //     for (let i = 0; i < imgsArr.length; i++) {
             //         let img = document.createElement("img");
