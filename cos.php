@@ -97,7 +97,7 @@
                             <div class="prod produs-' . $index . ' ">
                                 <img src="' . $imgs[0] . '" />
                                 <div class="detalii">
-                                    <h3>' . $item->nume . ' - ' . intval($item->pret, 10) *  intval($_SESSION["qty"][$_SESSION['user']][$item->id], 10) . ' RON </h3>
+                                    <h3>' . $item->nume . ' - ' . floatval($item->pret) *  intval($_SESSION["qty"][$_SESSION['user']][$item->id], 10) . ' RON </h3>
                                     <form method="POST" action="qt.php">
                                         <input type="number" min="1" class="input" onchange="showTotal()" name="qt" value=' . $_SESSION["qty"][$_SESSION['user']][$item->id] . ' />
                                         <input type="hidden" name="user" value="' . $_SESSION['user'] . '" />
