@@ -47,8 +47,11 @@
                 echo '
                 <div class="linie">
                     <a href="./register.php">Înregistrează-te</a>
+                </div>
+                <div class="linie">
                     <a href="./login.php">Intră în cont</a>
                 </div>
+
                 ';
             }
             ?>

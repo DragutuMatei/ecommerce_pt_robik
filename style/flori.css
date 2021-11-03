@@ -80,23 +80,23 @@
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 1) {
-  -webkit-transition-delay: 0.83123s;
-          transition-delay: 0.83123s;
+  -webkit-transition-delay: 0.01871s;
+          transition-delay: 0.01871s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 2) {
-  -webkit-transition-delay: 0.7538s;
-          transition-delay: 0.7538s;
+  -webkit-transition-delay: 0.68062s;
+          transition-delay: 0.68062s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 3) {
-  -webkit-transition-delay: 0.27593s;
-          transition-delay: 0.27593s;
+  -webkit-transition-delay: 0.91276s;
+          transition-delay: 0.91276s;
 }
 
 .header .nav-links .nav-link:nth-of-type(3n + 4) {
-  -webkit-transition-delay: 0.2006s;
-          transition-delay: 0.2006s;
+  -webkit-transition-delay: 0.36054s;
+          transition-delay: 0.36054s;
 }
 
 .header .nav-links .nav-link a {
@@ -238,20 +238,20 @@
     transition: opacity 0.2s ease-in-out 1s, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s, -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 1) {
-    -webkit-transition-delay: 0.34545s;
-            transition-delay: 0.34545s;
+    -webkit-transition-delay: 0.2358s;
+            transition-delay: 0.2358s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 2) {
-    -webkit-transition-delay: 0.95332s;
-            transition-delay: 0.95332s;
+    -webkit-transition-delay: 0.06325s;
+            transition-delay: 0.06325s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 3) {
-    -webkit-transition-delay: 0.80294s;
-            transition-delay: 0.80294s;
+    -webkit-transition-delay: 0.59487s;
+            transition-delay: 0.59487s;
   }
   .header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3n + 4) {
-    -webkit-transition-delay: 0.41251s;
-            transition-delay: 0.41251s;
+    -webkit-transition-delay: 0.78661s;
+            transition-delay: 0.78661s;
   }
   .header .menu-btn:checked ~ .menu-icon {
     border-radius: 90px;
@@ -402,7 +402,7 @@ footer .up .leftFooter .linie lord-icon {
   margin-right: 30px;
 }
 
-footer .up .leftFooter .linie p {
+footer .up .leftFooter .linie p, footer .up .leftFooter .linie a {
   font-size: 15px;
   color: white;
   font-family: "Roboto", sans-serif;
