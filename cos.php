@@ -201,8 +201,6 @@
         let all = 0;
 
         function showTotal() {
-
-
             all = 0;
 
             arrCuQTY = [];
@@ -213,6 +211,7 @@
 
             for (let i = 0; i < CATE_IS; i++) {
                 all += arrCuQTY[i] * pret[i];
+                console.log(all);
             }
             total.innerHTML = all + " RON";
         }
