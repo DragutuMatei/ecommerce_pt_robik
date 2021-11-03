@@ -36,7 +36,7 @@ if (Input::exists()) {
 
             if ($temporale != "") {
                 $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
-                $newFilePath = "./img/" . $_FILES['imagini']['name'][$i];
+                $newFilePath = "./imgs/" . $_FILES['imagini']['name'][$i];
                 if (move_uploaded_file($temporale, $newFilePath)) {
                     echo $temporale . "<br>";
                 }
