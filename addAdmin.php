@@ -25,34 +25,25 @@ if (Input::exists()) {
     if ($validation->passed()) {
         $user = new User();
 
-        // $files = array_filter($_FILES['imagini']['name']);
+        $files = array_filter($_FILES['imagini']['name']);
         $cate_is = count($_FILES['imagini']['name']);
 
         $array_cu_imag = array();
 
-        $array_cu_nume = array();
         for ($i = 0; $i < $cate_is; $i++) {
-            // $temporale = $_FILES['imagini']['tmp_name'][$i];
-            // echo $_FILES['imagini']['tmp_name'][$i] . "<br>";
+            $temporale = $_FILES['imagini']['tmp_name'][$i];
 
-            // if ($temporale != "") {
-            $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
-            //     $newFilePath = "./imgs/" . $_FILES['imagini']['name'][$i];
-            //     if (move_uploaded_file($temporale, $newFilePath)) {
-            //         echo $temporale . "<br>";
-            //     }
-            // }
-
-            $array_cu_nume[$i] = $_FILES['imagini']['name'][$i];
+            if ($temporale != "") {
+                $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
+                $newFilePath = "./img/" . $_FILES['imagini']['name'][$i];
+                move_uploaded_file($temporale, $newFilePath);
+            }
         }
-
-        Input::moveImg($array_cu_nume);
 
         $imgs = array();
         for ($i = 0; $i < count($array_cu_imag); $i++) {
             $imgs[$i] = $array_cu_imag[$i];
         }
-
 
         try {
             $user->addProdus(array(
@@ -63,7 +54,7 @@ if (Input::exists()) {
                 'cantitate' => Input::get("cantitate"),
                 'imagini' => json_encode($imgs)
             ));
-            // Redirect::to("admin.php");
+            Redirect::to("admin.php");
         } catch (Exception $e) {
             die($e->getMessage());
         }
