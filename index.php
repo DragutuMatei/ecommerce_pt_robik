@@ -11,8 +11,6 @@ require_once './core/init.php';
     <title>Magazin</title>
     <link rel="stylesheet" href="./style/landingPage.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyJjeynZiCrmE-tRu6TlCdhTNyMe9ghIo&callback=initMap&libraries=&v=weekly" defer>
-    </script>
     <link rel="icon" type="image/svg+xml" href="./img/idk.svg">
 
 </head>
