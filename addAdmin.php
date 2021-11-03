@@ -32,7 +32,7 @@ if (Input::exists()) {
 
         for ($i = 0; $i < $cate_is; $i++) {
             $temporale = $_FILES['imagini']['tmp_name'][$i];
-            echo "./img/" . $_FILES['imagini']['name'][$i] . "<br>";
+            echo $_FILES['imagini']['tmp_name'][$i] . "<br>";
 
             if ($temporale != "") {
                 $array_cu_imag[$i] = "./img/" . $_FILES['imagini']['name'][$i];
