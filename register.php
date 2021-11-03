@@ -97,8 +97,6 @@ if (Input::exists()) {
     </main>
     <?php
     require './components/footer.php';
-    ?>
-    <?php
     require_once './components/imports.php';
     ?>
 </body>

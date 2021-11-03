@@ -89,7 +89,7 @@
 
                         $index++;
                         $item = $cos->GetItem(array("id", "=", $produs));
-                        
+
 
                         $imgs = json_decode($item->imagini, true);
 
@@ -218,7 +218,11 @@
 
         showTotal();
     </script>
+    <?php
+    require './components/footer.php';
 
+    require_once './components/imports.php';
+    ?>
 </body>
 
 </html>

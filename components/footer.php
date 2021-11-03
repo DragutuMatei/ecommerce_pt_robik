@@ -4,17 +4,17 @@
             <div class="linie">
                 <lord-icon src="https://cdn.lordicon.com//zzcjjxew.json" trigger="loop" colors="primary:#121331,secondary:#ff6c00" style="width:60px;height:60px">
                 </lord-icon>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cupiditate. </p>
+                <p>Adresa lui robert</p>
             </div>
             <div class="linie">
                 <lord-icon src="https://cdn.lordicon.com//hciqteio.json" trigger="loop" colors="primary:#121331,secondary:#ff6c00" style="width:60px;height:60px">
                 </lord-icon>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cupiditate. </p>
+                <p> </p>
             </div>
             <div class="linie">
                 <lord-icon src="https://cdn.lordicon.com//rhvddzym.json" trigger="loop" colors="primary:#121331,secondary:#ff6c00" style="width:60px;height:60px">
                 </lord-icon>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cupiditate. </p>
+                <p> Eficiență și încredere </p>
             </div>
         </div>
         <div class="centerFooter">
@@ -30,29 +30,34 @@
                 </svg>
             </a>
         </div>
-        <div class="rightFooter">
-            <div id="map" style="width: 400px;height: 400px;"></div>
+        <div class="leftFooter">
+            <div class="linie">
+                <a href="./">Acasă</a>
+            </div>
+            <div class="linie">
+                <a href="./#contact">Despre Noi</a>
+            </div>
+            <div class="linie">
+                <a href="./figurine.php">Figurine</a>
+            </div>
+
+            <?php
+            $user = new User();
+            if (!$user->isLoggedIn()) {
+                echo '
+                <div class="linie">
+                    <a href="./register.php">Înregistrează-te</a>
+                    <a href="./login.php">Intră în cont</a>
+                </div>
+                ';
+            }
+            ?>
         </div>
     </div>
     <div class="down">
         <a>termeni si conditii</a>
         <h2>Copyright ©2021 Florăria de la parc | All rights reserved</h2>
     </div>
-    <script>
-        // function initMap() {
-        //     const uluru = {
-        //         lat: 44.4267674,
-        //         lng: 26.10253839
-        //     };
-
-        //     const map = new google.maps.Map(
-        //         document.getElementById("map"), {
-        //             zoom: 4,
-        //             center: uluru,
-        //         }
-        //     );
-        // }
-    </script>
 </footer>
 <!-- site facut de Dragutu Matei 
         fb: https://www.facebook.com/dragutu.matei/
