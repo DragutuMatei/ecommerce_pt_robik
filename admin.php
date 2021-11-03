@@ -44,13 +44,13 @@ if (!Session::exists("adminSession")) {
         </div>
         <div class="mb-3">
             <label for="pret" class="form-label">Scrie pretul produsului</label>
-            <input type="number" class="form-control" name="pret">
+            <input type="number" step=".01" class="form-control" name="pret">
 
 
         </div>
         <div class="mb-3">
             <label for="cantitate" class="form-label">Scrie ce cantitate ai momentan la acest produs</label>
-            <input type="number" step=".01" class="form-control" name="cantitate">
+            <input type="number" class="form-control" name="cantitate">
 
         </div>
         <div class="mb-3">
