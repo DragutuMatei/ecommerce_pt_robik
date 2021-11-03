@@ -31,7 +31,8 @@
         <div class="headerFlori">
             <div class="layer"></div>
             <div class="incadrare">
-                <h1>cele mai blana produse furate <br /> la tigani</h1>
+                <h1>Figurine deja printate care <br /> te aștepteaptă</h1>
+
             </div>
         </div>
         <div class="flori">
@@ -148,7 +149,7 @@
         const swiper = new Swiper('.swiper-container', {
             // Optional parameters
             // direction: 'vertical',
-            loop: true,
+            loop: false,
 
             // If we need pagination
             pagination: {
