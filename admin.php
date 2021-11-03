@@ -35,7 +35,6 @@ if (!Session::exists("adminSession")) {
 
         <div class="mb-3">
             <label for="nume" class="form-label">Scrie numele produsului</label>
-
             <input type="text" class="form-control" name="nume">
         </div>
         <div class="mb-3">

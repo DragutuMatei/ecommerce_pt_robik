@@ -44,7 +44,10 @@ if (Input::exists()) {
         $imgs = array();
         for ($i = 0; $i < count($array_cu_imag); $i++) {
             $imgs[$i] = $array_cu_imag[$i];
+            echo $imgs[$i] . "<br>";
         }
+
+        echo "plm";
 
         try {
             $user->addProdus(array(
