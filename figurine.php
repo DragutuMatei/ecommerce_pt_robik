@@ -28,25 +28,25 @@
 
 
     <main>
-        <div class="headerFlori">
+        <div class="headerproduse">
             <div class="layer"></div>
             <div class="incadrare">
-                <h1>cele mai blana flori furate <br /> la tigani</h1>
+                <h1>cele mai blana produse furate <br /> la tigani</h1>
             </div>
         </div>
         <div class="flori">
 
             <?php
             $db = Db::getInstance();
-            $flori = $db->get("flori", array("id", ">=", "1"));
+            $produse = $db->get("produse", array("id", ">=", "1"));
 
-            $flori = $flori->results();
+            $produse = $produse->results();
 
 
             $array_cu_img = array();
 
 
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 $imagini = json_decode($floare->imagini, true);
                 $img = $imagini[0];
                 echo   "<div class='floare'>
@@ -180,7 +180,7 @@
 
         const ArrayValue = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . $floare->id . "', ";
             }
             ?>
@@ -188,7 +188,7 @@
 
         const ArrayCantitate = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . $floare->cantitate . "', ";
             }
             ?>
@@ -213,7 +213,7 @@
         let deschis = false;
         let arrayDescrieri = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . trim($floare->descriere) . "', ";
             }
             ?>
@@ -221,7 +221,7 @@
 
         let arrayTitluri = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . $floare->nume . "', ";
             }
             ?>
@@ -229,7 +229,7 @@
 
         const ArrayImgs = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 $imagini = json_decode($floare->imagini, true);
                 echo "[ ";
                 foreach ($imagini as $fl) {
@@ -242,7 +242,7 @@
 
         const ArrayPret = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . strval($floare->pret) . "', ";
             }
             ?>

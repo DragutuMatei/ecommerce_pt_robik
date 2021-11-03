@@ -59,7 +59,7 @@ class User
 
     public function addProdus($fields = array())
     {
-        if (!$this->_db->insert("flori", $fields)) {
+        if (!$this->_db->insert("produse", $fields)) {
             throw new Exception("nush ce are frt");
         }
     }
@@ -76,7 +76,7 @@ class User
             }
         }
         
-        if (!$this->_db->delete("flori", $fields)) {
+        if (!$this->_db->delete("produse", $fields)) {
             throw new Exception("nush ce are frt");
         }
     }

@@ -70,13 +70,13 @@ if (!Session::exists("adminSession")) {
 
             <?php
             $db = Db::getInstance();
-            $flori = $db->get("flori", array("id", ">=", "1"));
+            $produse = $db->get("produse", array("id", ">=", "1"));
 
-            $flori = $flori->results();
+            $produse = $produse->results();
             $array_cu_img = array();
 
 
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 $imagini = json_decode($floare->imagini, true);
                 $img = $imagini[0];
                 echo   "<div class='floare'>
@@ -174,7 +174,7 @@ if (!Session::exists("adminSession")) {
 
 
                     foreach ($ids as $id) {
-                        $produs = $db->get("flori", array("id", "=", $id));
+                        $produs = $db->get("produse", array("id", "=", $id));
                         $produs = $produs->getFirst();
 
                         array_push($produse, $produs);
@@ -307,7 +307,7 @@ if (!Session::exists("adminSession")) {
 
         const ArrayValue = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . $floare->id . "', ";
             }
             ?>
@@ -315,7 +315,7 @@ if (!Session::exists("adminSession")) {
 
         const ArrayCantitate = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . $floare->cantitate . "', ";
             }
             ?>
@@ -340,7 +340,7 @@ if (!Session::exists("adminSession")) {
         let deschis = false;
         let arrayDescrieri = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . trim($floare->descriere) . "', ";
             }
             ?>
@@ -348,7 +348,7 @@ if (!Session::exists("adminSession")) {
 
         let arrayTitluri = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . $floare->nume . "', ";
             }
             ?>
@@ -356,7 +356,7 @@ if (!Session::exists("adminSession")) {
 
         const ArrayImgs = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 $imagini = json_decode($floare->imagini, true);
                 echo "[ ";
                 foreach ($imagini as $fl) {
@@ -369,7 +369,7 @@ if (!Session::exists("adminSession")) {
 
         const ArrayPret = [
             <?php
-            foreach ($flori as $floare) {
+            foreach ($produse as $floare) {
                 echo "'" . strval($floare->pret) . "', ";
             }
             ?>

@@ -15,12 +15,12 @@ class Comanda
             $item = $idP[$i];
             $qt = intval($nrQ[$i]);
             
-            $itemDB = $this->_db->get("flori", array("id", "=", $item));
+            $itemDB = $this->_db->get("produse", array("id", "=", $item));
             $itemDB = $itemDB->first();
             $itemQT = intval($itemDB->cantitate);
             $newQT = $itemQT - $qt;
 
-            if(!$this->_db->update("flori", $itemDB->id, array("cantitate"=>$newQT))){
+            if(!$this->_db->update("produse", $itemDB->id, array("cantitate"=>$newQT))){
                 throw new Exception("Nu le da jos");
             }
 

@@ -48,7 +48,7 @@ class Cos
 
     public function GetItem($params = array())
     {
-        if ($this->_db->get("flori", $params) == [])
+        if ($this->_db->get("produse", $params) == [])
             throw new Exception("nu mai e");
         return $this->_db->first();
     }
