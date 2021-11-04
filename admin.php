@@ -156,12 +156,14 @@ if (!Session::exists("adminSession")) {
         </div>
 
         <div class="idk">
-            <h1 id="com" style="user-select: none;">Vezi comenzile</h1>
+            <?php
+            $comanda = new Comanda();
+            $comenzi = $comanda->getComenzi();
+
+            ?>
+            <h1 id="com" style="user-select: none;">Vezi comenzile <?php echo " " . count($comenzi) ?></h1>
             <div class="comenzi" style="display: flex; flex-direction:column-reverse;  ">
                 <?php
-                $comanda = new Comanda();
-                $comenzi = $comanda->getComenzi();
-
                 foreach ($comenzi as $com) {
                     $produse = [];
                     $db = Db::getInstance();
@@ -215,15 +217,15 @@ if (!Session::exists("adminSession")) {
 
         <div class="idk">
 
-            <h1 id="maila">Vezi mailuri</h1>
+            <?php
+            $mail = new Mail();
+            $mailuri = $mail->getEmail();
+
+            ?>
+            <h1 id="maila">Vezi mailuri <?php echo " " . count($mailuri) ?> </h1>
 
             <div class="mailuri">
                 <?php
-
-                $mail = new Mail();
-
-                $mailuri = $mail->getEmail();
-
                 foreach ($mailuri as $mails) {
                     echo '
                     <div class="mail" style="margin:0 50px">
