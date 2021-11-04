@@ -145,7 +145,7 @@
                 <form action="addComanda.php" method="POST">
                     <textarea name="note" placeholder="Note*"></textarea>
 
-                    <input type="text" name="confirm" placeholder="Confirma nr de telefon sau emailul">
+                    <input type="text" name="confirm" required placeholder="Confirma nr de telefon sau emailul">
 
                     <?php
 
