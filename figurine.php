@@ -54,7 +54,7 @@
                             <div class='effect'></div>
                             <img src='" . $img . "' alt=''>
                             <h2>" . $floare->nume . "</h2>
-                            <h2 class='more' >Citeste mai mult</h2>
+                            <h2 class='more' >Citește mai mult</h2>
                             <input type='hidden' value=" . $floare->id . " />
                         </div>";
             }
@@ -125,7 +125,7 @@
             <div class="content" style="flex-wrap: nowrap; width:100vw; justify-content: space-around;">
                 <div class="txt">
                     <form action="mail.php" method="POST">
-                        <h2>Ai in gand alta figurina? Completeaza formularul si asteapta mesajul meu</h2>
+                        <h2>Ai in gând altă figurină? Completează formularul și asteaptă mesajul meu</h2>
                         <div class="row">
                             <input type="text" name="nume" placeholder="Nume" required>
                             <input type="text" name="prenume" placeholder="Prenume" required>

@@ -9,8 +9,6 @@
     <title>Magazin</title>
     <link rel="stylesheet" href="./style/login.css">
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyJjeynZiCrmE-tRu6TlCdhTNyMe9ghIo&callback=initMap&libraries=&v=weekly" defer>
-    </script>
 </head>
 
 <body>
@@ -23,7 +21,7 @@
     <main>
         <section class="loginAll">
             <div class="hero">
-                <h1>Înregistrează-te</h1>
+                <h1>Loghează-te</h1>
             </div>
 
 

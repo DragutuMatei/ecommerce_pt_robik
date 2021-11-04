@@ -130,7 +130,7 @@ require_once './core/init.php';
             <div class="content" style="flex-wrap: nowrap; width:100vw; justify-content: space-around;">
                 <div class="txt">
                     <form action="mail.php" method="POST">
-                        <h2>Pentru sugestii, ne puteti contacta prin formularul de mai jos</h2>
+                        <h2>Pentru sugestii, ne puteți contacta prin formularul de mai jos</h2>
                         <div class="row">
                             <input type="text" name="nume" placeholder="Nume" required>
                             <input type="text" name="prenume" placeholder="Prenume" required>
